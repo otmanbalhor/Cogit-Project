@@ -1,6 +1,9 @@
 <?php
 
-class controllerHome{
+//
+//CLASS POUR RECUPERER DANS LE MODEL InvoicesManagaer LA FONCTION getInvoices()
+//
+class ControllerInvoices{
 
     private $_invoicesManager;
     private $view;
@@ -25,6 +28,6 @@ class controllerHome{
         //
         $invoices = $this->_invoicesManager->getInvoices();
 
-        require_once('Views/AccueilView.php');
+        require_once('Views/InvoicesView.php');
     }
 }

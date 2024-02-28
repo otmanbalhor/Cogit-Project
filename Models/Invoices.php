@@ -3,6 +3,7 @@
 class Invoices{
 
     private $_id;
+    private $_due_date;
     private $_ref;
     private $created_at;
     private $update_at;
@@ -45,6 +46,11 @@ class Invoices{
         }
     }
 
+    public function setDue_date($due_date){
+
+        $this->_due_date = $due_date;
+    }
+
     public function setRef($ref){
 
         if(is_string($ref)){
@@ -69,6 +75,14 @@ class Invoices{
 
         return $id;
     }
+
+    public function getDue_date(){
+
+        $due_date = $this->_due_date;
+
+        return $due_date;
+    }
+
 
     public function getRef(){
 
