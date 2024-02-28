@@ -59,17 +59,6 @@ CREATE TABLE IF NOT EXISTS `cogip`.`permissions` (
   `updated_at` DATETIME NULL,
   PRIMARY KEY (`category_id`));
 
-
--- -----------------------------------------------------
--- Table `cogip`.`user`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `cogip`.`user` (
-  `username` VARCHAR(16) NOT NULL,
-  `email` VARCHAR(255) NULL,
-  `password` VARCHAR(32) NOT NULL,
-  `create_time` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP);
-
-
 -- -----------------------------------------------------
 -- Table `cogip`.`roles_has_permissions`
 -- -----------------------------------------------------
