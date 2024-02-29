@@ -12,10 +12,10 @@
         
         <div class="nav-links flex-grow text-center">
             <ul class="flex justify-start gap-4">
-                <li><a href="#" class="hover:text-gray-300 hover:border hover:border-gray-300 p-1">Home</a></li>
-                <li><a href="#" class="hover:text-gray-300 hover:border hover:border-gray-300 p-1">Invoices</a></li>
-                <li><a href="#" class="hover:text-gray-300 hover:border hover:border-gray-300 p-1">Compagnies</a></li>
-                <li><a href="#" class="hover:text-gray-300 hover:border hover:border-gray-300 p-1">Contacts</a></li>
+                <li><a href="home" class="hover:text-gray-300 hover:border hover:border-gray-300 p-1">Home</a></li>
+                <li><a href="invoices" class="hover:text-gray-300 hover:border hover:border-gray-300 p-1">Invoices</a></li>
+                <li><a href="companies" class="hover:text-gray-300 hover:border hover:border-gray-300 p-1">Companies</a></li>
+                <li><a href="contacts" class="hover:text-gray-300 hover:border hover:border-gray-300 p-1">Contacts</a></li>
             </ul>
         </div>
         

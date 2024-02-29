@@ -1,6 +1,6 @@
 <?php require 'Views/includes/header.php'?>
 
-<?php // Use any data loaded in the controller here ?>
+<?= $content ?>
 
 
 
