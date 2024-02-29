@@ -59,7 +59,6 @@ CREATE TABLE IF NOT EXISTS `cogip`.`permissions` (
   `updated_at` DATETIME NULL,
   PRIMARY KEY (`category_id`));
 
-
 -- -----------------------------------------------------
 -- Table `cogip`.`roles_has_permissions`
 -- -----------------------------------------------------
