@@ -33,7 +33,7 @@ class Database{
     //
     //FONCTION POUR RECUPERER CHAQUE TABLES AVEC COMME PARAM LE NOM DU TABLEAU ET LA CLASSE A CREER POUR AFFICHER LES DATAS
     //
-    protected function getTable($table,$obj,$column, $elemPerPage){
+    protected function getTable($table,$obj,$column,$elemPerPage){
 
         $tab = [];
 

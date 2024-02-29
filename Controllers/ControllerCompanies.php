@@ -24,7 +24,7 @@ class ControllerCompanies{
         $this->_companiesManager = new CompaniesManager;
 
         //
-        //INSTANCE DE CompaniesManagaer.PHP
+        //INSTANCE DE CompaniesManagaer.php
         //
         $companies = $this->_companiesManager->getCompanies();
 
