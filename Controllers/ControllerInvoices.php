@@ -32,5 +32,7 @@ class ControllerInvoices{
 
         $this->_view = new View('Invoices');
         $this->_view->generate(array('invoices' => $invoices));
+        $this->_view = new View('Invoices');
+        $this->_view->generate(array('invoices' => $invoices));
     }
 }
