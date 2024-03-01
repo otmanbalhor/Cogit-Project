@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `cogip`.`invoices` (
   INDEX `fk_invoices_companies_idx` (`id_company` ASC) VISIBLE,
   CONSTRAINT `fk_invoices_companies`
     FOREIGN KEY (`id_company`)
-    REFERENCES `cogip`.`companies` (`type_id`)
+    REFERENCES `cogip`.`companies` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
