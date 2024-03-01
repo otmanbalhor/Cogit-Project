@@ -69,6 +69,10 @@ class Invoices{
         $this->update_at = $dateUptade;
     }
 
+    public function setName($name){
+        $this->name = $name;
+    }
+
     public function getId(){
 
         $id = $this->_id;
@@ -105,5 +109,10 @@ class Invoices{
         return $dateUptade;
     }
 
-    
+    public function getName(){
+
+        $name = $this->_name;
+
+        return $name;
+    }
 }

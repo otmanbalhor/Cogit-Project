@@ -3,6 +3,7 @@
 //
 //CLASS POUR RECUPERER DANS LE MODEL InvoicesManagaer LA FONCTION getInvoices()
 //
+require_once('Views/View.php');
 class ControllerInvoices{
 
     private $_invoicesManager;
@@ -28,6 +29,7 @@ class ControllerInvoices{
         //
         $invoices = $this->_invoicesManager->getInvoices();
 
-        require_once('Views/InvoicesView.php');
+        $this->_view = new View('Invoices');
+        $this->_view->generate(array('invoices' => $invoices));
     }
 }
