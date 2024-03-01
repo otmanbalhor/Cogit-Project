@@ -3,10 +3,11 @@
 //
 //CLASS POUR RECUPERER DANS LE MODEL CompaniesManagaer LA FONCTION getCompanies()
 //
+require_once('Views/View.php');
 class ControllerContacts{
 
     private $_contactsManager;
-    private $view;
+    private $_view;
 
     public function __construct($url)
     {
@@ -28,6 +29,7 @@ class ControllerContacts{
         //
         $contacts = $this->_contactsManager->getContacts();
 
-        require('Views/ViewContact.php');
+        $this->_view = new View('Contacts');
+        $this->_view->generate(array('contacts' => $contacts));
     }
 }
