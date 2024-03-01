@@ -75,10 +75,6 @@ class Invoices{
         $this->name = $companyName;
     }
 
-    public function setName($name){
-        $this->name = $name;
-    }
-
     public function getId(){
 
         $id = $this->_id;
@@ -122,10 +118,4 @@ class Invoices{
         return $companyName;
     }
 
-    public function getName(){
-
-        $name = $this->_name;
-
-        return $name;
-    }
 }
