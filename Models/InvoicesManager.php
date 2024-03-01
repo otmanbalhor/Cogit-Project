@@ -6,6 +6,6 @@ class InvoicesManager extends Database{
 
         $this->getDatabase();
         
-        return $this->getTable('invoices','Invoices','created_at',10);
+        return $this->getTable(10, 'invoices.*, companies.name', 'invoices','Invoices', 'LEFT JOIN companies ON id_company = companies.id', 'created_at', 'asc');
     }
 }

@@ -6,6 +6,7 @@
                 <th>INVOICE NUMBER</th>
                 <th>DUE DATES</th>
                 <th>CREATED AT</th>
+                <th>COMPANY</th>
             </tr>
         </thead>
         <tbody>
@@ -14,6 +15,7 @@
                     <td><?= $invoice->getRef() ?></td>
                     <td><?= $invoice->getDue_date() ?></td>
                     <td><?= $invoice->getCreated_at() ?></td>
+                    <td><?= $invoice->getName() ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>

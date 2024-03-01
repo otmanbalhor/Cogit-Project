@@ -7,6 +7,7 @@ class Invoices{
     private $_ref;
     private $created_at;
     private $update_at;
+    private $name;
 
      //
     //CETTE FONCTION VA NOUS RENVOYER AUX SETTERS POUR METTRE A JOUR LES DATAS RECUPERES SUR LES PROPRIETES AU DESSUS MAIS AVEC CERTAINS CONDITIONS
@@ -64,9 +65,14 @@ class Invoices{
         $this->created_at = $dateCreated;
     }
 
-    public function setUpdate_at($dateUptade){
+    public function setUpdate_at($dateUpdate){
 
-        $this->update_at = $dateUptade;
+        $this->update_at = $dateUpdate;
+    }
+
+    public function setName($companyName){
+
+        $this->name = $companyName;
     }
 
     public function getId(){
@@ -100,9 +106,16 @@ class Invoices{
 
     public function getUpdate_at(){
 
-        $dateUptade = $this->update_at;
+        $dateUpdate = $this->update_at;
 
-        return $dateUptade;
+        return $dateUpdate;
+    }
+
+    public function getName(){
+
+        $companyName = $this->name;
+
+        return $companyName;
     }
 
     

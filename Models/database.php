@@ -33,7 +33,7 @@ class Database{
     //
     //FONCTION POUR RECUPERER CHAQUE TABLES AVEC COMME PARAM LE NOM DU TABLEAU ET LA CLASSE A CREER POUR AFFICHER LES DATAS
     //
-    protected function getTable($table,$obj,$column,$elemPerPage){
+    protected function getTable($elemPerPage, $select, $table, $obj, $join, $column, $order){
 
         $tab = [];
 
@@ -44,7 +44,7 @@ class Database{
         }
         $ratio = round(($page - 1) * $elemPerPage);
 
-        $req = self::$_database->prepare('SELECT * FROM '.$table.' ORDER BY '.$column.' asc LIMIT :ratio, :elemPerPage');
+        $req = self::$_database->prepare('SELECT '.$select.' FROM '.$table. ' '.$join.' ORDER BY '.$column.' '.$order.' LIMIT :ratio, :elemPerPage');
         $req->bindParam(':ratio', $ratio, PDO::PARAM_INT);
         $req->bindParam(':elemPerPage', $elemPerPage, PDO::PARAM_INT);
         $req->execute();

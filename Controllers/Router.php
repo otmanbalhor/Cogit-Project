@@ -44,7 +44,7 @@ class Router{
 
         } catch (Exception $e) {
 
-            echo 'error !'.$e->getMessage();
+            echo 'error ! '.$e->getMessage();
             
         }
     }

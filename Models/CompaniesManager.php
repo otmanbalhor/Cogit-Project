@@ -7,6 +7,6 @@ class CompaniesManager extends Database{
 
         $this->getDatabase();
 
-        return $this->getTable('companies','Companies','id',10);
+        return $this->getTable(10, 'companies.*, types.name AS typeName', 'companies','Companies', 'LEFT JOIN types ON type_id = types.id', 'id', 'asc');
     }
 }
