@@ -3,9 +3,9 @@
 //
 //CLASS POUR RECUPERER DANS LE MODEL CompaniesManagaer LA FONCTION getCompanies()
 //
-class ControllerCompanies{
+class ControllerContacts{
 
-    private $_companiesManager;
+    private $_contactsManager;
     private $view;
 
     public function __construct($url)
@@ -14,20 +14,20 @@ class ControllerCompanies{
             throw new Exception('Page introuvable');
         }else{
 
-            $this->companies();
+            $this->contacts();
         }
         
     }
 
-    private function companies(){
+    private function contacts(){
 
-        $this->_companiesManager = new CompaniesManager;
+        $this->_contactsManager = new ContactsManager;
 
         //
         //INSTANCE DE CompaniesManagaer.php
         //
-        $companies = $this->_companiesManager->getCompanies();
+        $contacts = $this->_contactsManager->getContacts();
 
-        require('Views/ViewCompanies.php');
+        require('Views/ViewContact.php');
     }
 }

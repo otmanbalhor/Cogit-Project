@@ -28,6 +28,6 @@ class ControllerInvoices{
         //
         $invoices = $this->_invoicesManager->getInvoices();
 
-        require_once('Views/InvoicesView.php');
+        require_once('Views/ViewInvoices.php');
     }
 }
