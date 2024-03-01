@@ -3,10 +3,11 @@
 //
 //CLASS POUR RECUPERER DANS LE MODEL InvoicesManagaer LA FONCTION getInvoices()
 //
+require_once('Views/View.php');
 class ControllerInvoices{
 
     private $_invoicesManager;
-    private $view;
+    private $_view;
 
     public function __construct($url)
     {
@@ -28,6 +29,8 @@ class ControllerInvoices{
         //
         $invoices = $this->_invoicesManager->getInvoices();
 
-        require_once('Views/ViewInvoices.php');
+        $this->_view = new View('Invoices');
+        $this->_view->generate(array('invoices' => $invoices));
+
     }
 }

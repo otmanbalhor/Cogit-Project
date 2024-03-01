@@ -3,10 +3,11 @@
 //
 //CLASS POUR RECUPERER DANS LE MODEL CompaniesManagaer LA FONCTION getCompanies()
 //
+require_once('Views/View.php');
 class ControllerCompanies{
 
     private $_companiesManager;
-    private $view;
+    private $_view;
 
     public function __construct($url)
     {
@@ -27,7 +28,9 @@ class ControllerCompanies{
         //INSTANCE DE CompaniesManagaer.php
         //
         $companies = $this->_companiesManager->getCompanies();
+ 
+        $this->_view = new View('Companies');
+        $this->_view->generate(array('companies' => $companies));
 
-        require('Views/ViewCompanies.php');
     }
 }

@@ -1,7 +1,7 @@
 <footer class="bg-blue-200 text-gray-800 py-8">
     <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <div class="mb-4 md:mb-0">
-            <p class="text-lg font-bold">COGIP</p>
+            <p class=" text-lg font-bold  p-1">COGIP</p>
             <p class="flex flex-row"><img class="mr-1" src="Assets/img/home.png" alt="Home">Square des Martyrs, 6000 Charleroi</p>
             <p class="flex flex-row"><img class="mr-1" src="Assets/img/phone.png" alt="Phone">(123) 456-7890</p>
             <p class="flex flex-row"><img class="mr-1" src="Assets/img/printer.png" alt="Fax">(123) 456-7890</p>
