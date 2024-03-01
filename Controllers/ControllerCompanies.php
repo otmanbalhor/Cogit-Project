@@ -9,6 +9,7 @@ class ControllerCompanies{
 
     private $_companiesManager;
     private $_view;
+    private $_view;
 
     public function __construct($url)
     {
@@ -32,5 +33,6 @@ class ControllerCompanies{
 
         $this->_view = new View('Companies');
         $this->_view->generate(array('companies' => $companies));
+
     }
 }
