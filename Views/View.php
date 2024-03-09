@@ -7,7 +7,7 @@ class View
 
     public function __construct($action)
     {
-        $this->_file = 'Views/View' .$action.'.php';
+        $this->_file = 'Views/Display/View' .$action.'.php';
     }
 
     public function generate($data)

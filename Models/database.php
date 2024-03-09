@@ -60,4 +60,58 @@ class Database{
         return $tab;
         $req->closeCursor();
     }
+
+    /*protected function getSearch($select,$table,$obj){
+
+        $tab = [];
+
+        if (isset($_GET["keywords"]) && !empty($_GET["keywords"])) {
+
+            $keywords = htmlspecialchars($_GET["keywords"]);
+
+            $req = self::$_database->prepare('SELECT '.$select.' FROM '.$table .' WHERE '.$select.' LIKE "%'.$keywords.'%"');
+            $req->execute();
+
+            while($search = $req->fetch(PDO::FETCH_ASSOC)){
+
+                $tab[] = new $obj($search);
+
+                var_dump($tab);
+            }
+
+            return $tab;
+        }
+    }*/
+
+    protected function postSignup($table){
+        if(isset($_POST['ok'])){
+
+            $firstname = $_POST["firstname"];
+            $lastname = $_POST["lastname"];
+            $email = $_POST["email"];
+            $password = $_POST["password"];
+            $phone = $_POST["phone"];
+            $city = $_POST["city"];
+            $country = $_POST["country"];
+            $zip = $_POST["zip"];
+        
+            $req = self::$_database->prepare("INSERT INTO ".$table." VALUES (0, :firstname, :lastname, :email, :password, :phone, :city, :country, :zip)");
+        
+            $req->execute(
+        
+                array(
+                    "firstname" => $firstname,
+                    "lastname" => $lastname,
+                    "email" => $email,
+                    "password" => md5($password),
+                    "phone" => $phone,
+                    "city" => $city,
+                    "country" => $country,
+                    "zip" => !empty($zip) ? $zip : null
+                )
+            );
+            $resp = $req->fetchAll(PDO::FETCH_ASSOC);
+        
+        } 
+    }
 }
