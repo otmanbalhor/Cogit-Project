@@ -24,10 +24,10 @@
         <div class="mb-4 md:mb-0">
             <p class="text-lg font-bold ">Quick Links</p>
             <div class="flex gap-4">
-                <a href="#" class="text-blue-600 hover:underline">HOME</a>
-                <a href="#" class="text-blue-600 hover:underline">INVOICES</a>
-                <a href="#" class="text-blue-600 hover:underline">COMPANIES</a>
-                <a href="#" class="text-blue-600 hover:underline">CONTACTS</a>
+                <a href="home" class="text-blue-600 hover:underline">HOME</a>
+                <a href="invoices" class="text-blue-600 hover:underline">INVOICES</a>
+                <a href="companies" class="text-blue-600 hover:underline">COMPANIES</a>
+                <a href="contacts" class="text-blue-600 hover:underline">CONTACTS</a>
                 <a href="#" class="text-blue-600 hover:underline">PRIVACY POLICY</a>
             </div>
         </div>
