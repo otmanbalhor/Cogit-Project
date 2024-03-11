@@ -6,7 +6,7 @@
     <link href="./Assets/src/output.css" rel="stylesheet">
     <title>COGIP</title>
 </head>
-<header>
+<body>
     <nav class="bg-gray-700 text-white p-4  flex justify-between items-center">
         <h1 class="text-2xl font-bold m-6 mr-10">COGIP</h1>
         
@@ -24,7 +24,8 @@
             <button class="transition ease-in-out delay-150 bg-gray-700 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-100 text-white font-bold py-2 px-4 rounded">Login</button>
         </div>
     </nav>
-</header>
+</body>
 
 
+  
     
