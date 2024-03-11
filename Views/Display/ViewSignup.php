@@ -8,11 +8,11 @@
 
                 <div class="flex flex-row mb-6">
                     <div class="mb-3 space-y-2 w-full mr-2">
-                        <label for="firstname">First Name <span class="text-red-300">*</span></label>
+                        <label for="firstname">First Name <span class="text-red-500">*</span></label>
                         <input type="text" name="firstname" placeholder="First" required class="border rounded px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-300">
                     </div>
                     <div class="mb-3 space-y-2 w-full">
-                        <label for="lastname">Last Name <span class="text-red-300">*</span></label>
+                        <label for="lastname">Last Name <span class="text-red-500">*</span></label>
                         <input type="text" name="lastname" placeholder="Last" required class="border rounded px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-300">
                     </div>
                 </div>
