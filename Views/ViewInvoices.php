@@ -3,9 +3,6 @@
   <span class="absolute inset-y-10 right-0 w-1/2 h-1/2 bg-blue-500"></span>
   <span class="relative z-10 text-6xl font-extrabold leading-14 tracking-wide text-left m-8">All Invoices</span>
 </span>
-
-  
-
     <table class="min-w-full bg-white border border-gray-300 ml-8 mr-8">
         <thead>
             <tr class="bg-gray-700 text-white  m-4">
@@ -28,13 +25,14 @@
         </tbody>
     </table>
 
-    <div class="m-4 text-center">
-        <?php 
-            for ($i = 1; $i <= 10; $i++) {
-                echo "<a href='' class='px-2 py-1 bg-gray-500 text-white  mr-2'>$i</a>";
-            }
-        ?>
+    <div class="m-4 flex justify-center">
+        <div class="space-x-2">
+            <?php 
+             for ($i = 1; $i <= 10; $i++) {
+                echo "<a href='#' class='px-4 py-2 bg-blue-500 text-white rounded transition hover:bg-blue-600'>$i</a>";
+                }
+            ?>
+         </div>
     </div>
-
 </body>
 

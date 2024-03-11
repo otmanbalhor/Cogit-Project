@@ -14,23 +14,27 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($companies as $company) : ?>
-                <tr>
-                    <td><?= $company->getName() ?></td>
-                    <td><?= $company->getTva() ?></td>
-                    <td><?= $company->getCountry() ?></td>
-                    <td><?= $company->getType() ?></td>
-                    <td><?= $company->getCreated_at() ?></td>
+        <?php foreach ($companies as $key => $company) : ?>
+                <?php $bgColorClass = $key % 2 == 0 ? 'bg-gray-100' : ''; ?>
+                <tr class="<?= $bgColorClass ?>">
+                    <td class="py-2 px-4 border-b text-center"><?= $company->getName() ?></td>
+                    <td class="py-2 px-4 border-b text-center"><?= $company->getTva() ?></td>
+                    <td class="py-2 px-4 border-b text-center"><?= $company->getCountry() ?></td>
+                    <td class="py-2 px-4 border-b text-center"><?= $company->getType() ?></td>
+                    <td class="py-2 px-4 border-b text-center"><?= $company->getCreated_at() ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
-    <div>
+    <div class="m-4 flex justify-center">
+    <div class="space-x-2">
         <?php 
-            for($i=1;$i<=10;$i++){
-
-                echo "<a href=''>$i</a>&nbsp";
+            for ($i = 1; $i <= 10; $i++) {
+                echo "<a href='#' class='px-4 py-2 bg-blue-500 text-white rounded transition hover:bg-blue-600'>$i</a>";
             }
         ?>
     </div>
+</div>
+
+
 </body>
