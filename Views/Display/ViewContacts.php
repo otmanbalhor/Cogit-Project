@@ -6,11 +6,11 @@
     <table class="min-w-full bg-white border border-gray-300 ml-8 mr-8">
         <thead>
             <tr class="bg-gray-700 text-white  m-4">
-                <th class="py-2 px-4 border-b">NAME</th>
-                <th class="py-2 px-4 border-b">PHONE</th>
-                <th class="py-2 px-4 border-b">MAIL</th>
-                <th class="py-2 px-4 border-b">COMPANY</th>
-                <th class="py-2 px-4 border-b">CREATED AT</th>
+                <th class="py-2 px-4 border-b">Name</th>
+                <th class="py-2 px-4 border-b">Phone</th>
+                <th class="py-2 px-4 border-b">Mail</th>
+                <th class="py-2 px-4 border-b">Company</th>
+                <th class="py-2 px-4 border-b">Created at</th>
             </tr>
         </thead>
         <tbody>
