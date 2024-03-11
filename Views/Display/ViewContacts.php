@@ -17,7 +17,7 @@
         <?php foreach ($contacts as $key => $contact) : ?>
                 <?php $bgColorClass = $key % 2 == 0 ? 'bg-gray-100' : ''; ?>
                 <tr class="<?= $bgColorClass ?>">
-                    <td class="py-2 px-4 border-b text-center"><?= $contact->getName() ?></td>
+                    <td class="py-2 px-4 border-b text-center"><a href="showContact.php?id=<?= $contact->getId() ?>" class="hover:underline"><?= $contact->getName() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $contact->getPhone() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $contact->getEmail() ?></td>
                     <td class="py-2 px-4 border-b text-center"></td>
