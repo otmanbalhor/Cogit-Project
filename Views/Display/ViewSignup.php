@@ -1,7 +1,7 @@
 <body>
 
-    <div class="flex items-center justify-center m-4">
-        <div class="bg-gray-200 rounded shadow-md w-3/4 p-4">
+    <div class="flex items-center justify-center m-8">
+        <div class="bg-gray-200 rounded shadow-md w-1/3 p-4">
             <h2 class="text-2xl font-bold text-center mb-6">SIGN UP</h2>
 
             <form class="flex flex-col" action="" method="POST">
