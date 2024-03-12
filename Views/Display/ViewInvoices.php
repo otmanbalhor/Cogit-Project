@@ -24,7 +24,8 @@ if (isset($_GET["keywords"]) && !empty($_GET["keywords"])) {
 }
 ?>
 
-<body class=" ">
+<body>
+    <main class="m-8">
     <span class="relative inline-block m-4">
         <span class="absolute inset-y-10 right-0 w-1/2 h-1/2 bg-blue-500"></span>
         <span class="relative z-10 text-6xl font-extrabold leading-14 tracking-wide text-left m-8">All Invoices</span>
@@ -47,7 +48,7 @@ if (isset($_GET["keywords"]) && !empty($_GET["keywords"])) {
     
     <?php } ?>
 
-    <table class="min-w-full bg-white border border-gray-300 ml-8 mr-8">
+    <table class="min-w-full bg-white border border-gray-300 mx-auto">
         <thead>
             <tr class="bg-gray-700 text-white  m-4">
                 <th class="py-2 px-4 border-b">INVOICE NUMBER</th>
@@ -77,5 +78,5 @@ if (isset($_GET["keywords"]) && !empty($_GET["keywords"])) {
         ?>
     </div>
 </div>
-
+        </main>
 </body>
