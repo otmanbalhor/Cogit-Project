@@ -29,7 +29,20 @@ class ControllerContacts{
         //
         $contacts = $this->_contactsManager->getContacts();
 
+
+        $currentPage = isset($_GET['page']) ? (int) strip_tags(intval($_GET['page'])) : 1;
+        $elemPerPage = 10;
+
+        $firstContact = ($currentPage * $elemPerPage) - $elemPerPage; 
+
+        $searchs = $this->_contactsManager->getContactsPagination($currentPage,$elemPerPage,$firstContact);
+    
+        $totalContacts = $this->_contactsManager->getTotalContacts();
+        
+        $totalPages = ceil($totalContacts / $elemPerPage);
+
+
         $this->_view = new View('Contacts');
-        $this->_view->generate(array('contacts' => $contacts));
+        $this->_view->generate(array('contacts' => $contacts, 'totalPages' => $totalPages));
     }
 }

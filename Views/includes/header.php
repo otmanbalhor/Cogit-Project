@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./Assets/src/output.css" rel="stylesheet">
+    <link href="Assets/dist/output.css" rel="stylesheet">
     <title>COGIP</title>
 </head>
 <body>
