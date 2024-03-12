@@ -24,7 +24,7 @@
             <button class="transition ease-in-out delay-150 bg-gray-700 hover:-translate-y-1 hover:scale-110 hover:bg-gray-900 duration-100 text-white font-bold py-2 px-4 rounded">Login</button>
         </div>
     </nav>
-</body>
+
 
 
   
