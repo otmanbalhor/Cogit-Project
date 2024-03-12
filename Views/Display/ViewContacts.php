@@ -1,9 +1,10 @@
 <body>
+    <main class="m-8">
 <span class="relative inline-block m-4">
   <span class="absolute inset-y-10 right-0 w-1/2 h-1/2 bg-blue-500"></span>
   <span class="relative z-10 text-6xl font-extrabold leading-14 tracking-wide text-left m-8">All Contacts</span>
 </span>
-    <table class="min-w-full bg-white border border-gray-300 ml-8 mr-8">
+    <table class="min-w-full bg-white border border-gray-300 mx-auto">
         <thead>
             <tr class="bg-gray-700 text-white  m-4">
                 <th class="py-2 px-4 border-b">NAME</th>
@@ -17,7 +18,7 @@
         <?php foreach ($contacts as $key => $contact) : ?>
                 <?php $bgColorClass = $key % 2 == 0 ? 'bg-gray-100' : ''; ?>
                 <tr class="<?= $bgColorClass ?>">
-                    <td class="py-2 px-4 border-b text-center"><?= $contact->getName() ?></td>
+                    <td class="py-2 px-4 border-b text-center"><a href="showContact.php?id=<?= $contact->getId() ?>" class="hover:underline"><?= $contact->getName() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $contact->getPhone() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $contact->getEmail() ?></td>
                     <td class="py-2 px-4 border-b text-center"></td>
@@ -35,4 +36,5 @@
         ?>
     </div>
 </div>
+        </main>
 </body>
