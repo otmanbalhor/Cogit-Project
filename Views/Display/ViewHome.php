@@ -7,7 +7,7 @@
   <span class="absolute inset-y-10 right-0 w-1/2 h-1/2 bg-blue-500"></span>
   <span class="relative z-10 text-6xl font-extrabold leading-14 tracking-wide text-left m-8">Last Invoices</span>
 </span>
-<table class="min-w-full bg-white border border-gray-300 ml-8 mr-8">
+<table class="min-w-full bg-white border border-gray-300 mx-auto">
         <thead>
             <tr class="bg-gray-700 text-white  m-4">
                 <th class="py-2 px-4 border-b">Invoice number</th>
@@ -31,7 +31,7 @@
   <span class="absolute inset-y-10 right-0 w-1/2 h-1/2 bg-blue-500"></span>
   <span class="relative z-10 text-6xl font-extrabold leading-14 tracking-wide text-left m-8">Last Contacts</span>
 </span>
-<table class="min-w-full bg-white border border-gray-300 ml-8 mr-8">
+<table class="min-w-full bg-white border border-gray-300 mx-auto">
         <thead>
             <tr class="bg-gray-700 text-white  m-4">
                 <th class="py-2 px-4 border-b">Name</th>
@@ -56,7 +56,7 @@
   <span class="absolute inset-y-10 right-0 w-1/2 h-1/2 bg-blue-500"></span>
   <span class="relative z-10 text-6xl font-extrabold leading-14 tracking-wide text-left m-8">Last Companies</span>
 </span>
-<table class="min-w-full bg-white border border-gray-300 ml-8 mr-8">
+<table class="min-w-full bg-white border border-gray-300 mx-auto">
         <thead>
             <tr class="bg-gray-700 text-white  m-4">
                 <th class="py-2 px-4 border-b">Name</th>
@@ -77,6 +77,7 @@
             <?php endforeach; ?>
         </thead>
 </table>
+</main>
 <span class="bg-blue-200 text-gray-800 p-4  flex justify-between items-center">
 <p class="text-6xl font-extrabold ml-20 ">WORK BETTER IN YOUR COMPANY</p>
 <img class="rounded-full w-1/2 h-1/2 m-20" src="Assets/img/logo.jpg" alt="">   
