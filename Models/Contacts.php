@@ -4,7 +4,7 @@ class Contacts{
 
     private $_id;
     private $_name;
-    //private $_company_id;
+    private $_company_id;
     private $_email;
     private $_phone;
     private $_created_at;
@@ -14,6 +14,7 @@ class Contacts{
     public function __construct(array $data){
 
         $this->hydrate($data);
+
     }
 
     public function hydrate(array $data){
@@ -47,13 +48,13 @@ class Contacts{
 
     }
 
-    /*public function setCompany_id($company_id){
+    public function setCompany_id($company_id){
 
         if(is_int($company_id)){
 
             $this->_company_id = $company_id;
         }
-    }*/
+    }
 
     public function setEmail($email){
 
@@ -96,12 +97,12 @@ class Contacts{
         return $name;
      }
 
-     /*public function getCompany_id(){
+     public function getCompany_id(){
 
         $company_id = $this->_company_id;
 
         return $company_id;
-     }*/
+     }
 
      public function getEmail(){
 

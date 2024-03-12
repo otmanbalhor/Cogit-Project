@@ -6,7 +6,7 @@ if(isset($_SESSION["username"])){
 
     $username = $_SESSION["username"];
 
-    echo "Hello ".$username;
+    echo "Wlecome back ".$username;
 }else{
 
     header("Location: ViewLogin.php");
