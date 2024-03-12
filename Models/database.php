@@ -61,7 +61,7 @@ class Database{
         $req->closeCursor();
     }
 
-    /*protected function getSearch($select,$table,$obj){
+    protected function getSearch($select,$table,$obj){
 
         $tab = [];
 
@@ -81,7 +81,7 @@ class Database{
 
             return $tab;
         }
-    }*/
+    }
 
     protected function postSignup($table){
         if(isset($_POST['ok'])){
