@@ -15,15 +15,17 @@
                 <th class="py-2 px-4 border-b">Company</th>
                 <th class="py-2 px-4 border-b">Created at</th>
             </tr>
+            <?php foreach ($home->lastInvoices as $key => $lastInvoice) : ?>
+                <?php $bgColorClass = $key % 2 == 0 ? 'bg-gray-100' : ''; ?>
+                <tr class="<?= $bgColorClass ?>">
+                    <td class="py-2 px-4 border-b text-center"><?= $lastInvoice->getRef() ?></td>
+                    <td class="py-2 px-4 border-b text-center"><?= $lastInvoice->getDue_date() ?></td>
+                    <td class="py-2 px-4 border-b text-center"><?= $lastInvoice->getName() ?></td>
+                    <td class="py-2 px-4 border-b text-center"><?= $lastInvoice->getCreated_at() ?></td>
+                </tr>
+            <?php endforeach; ?>
         </thead>
 
-<?php
-
-foreach ($home->lastInvoices as $lastInvoice){
-    echo '<p>' . $lastInvoice->getRef() . '</p>';
-}
-
-?>
 </table>
 <span class="relative inline-block m-4">
   <span class="absolute inset-y-10 right-0 w-1/2 h-1/2 bg-blue-500"></span>
@@ -38,6 +40,16 @@ foreach ($home->lastInvoices as $lastInvoice){
                 <th class="py-2 px-4 border-b">Company</th>
                 <th class="py-2 px-4 border-b">Created at</th>
             </tr>
+            <?php foreach ($home->lastContacts as $key => $lastContact) : ?>
+                <?php $bgColorClass = $key % 2 == 0 ? 'bg-gray-100' : ''; ?>
+                <tr class="<?= $bgColorClass ?>">
+                    <td class="py-2 px-4 border-b text-center"><?= $lastContact->getName() ?></td>
+                    <td class="py-2 px-4 border-b text-center"><?= $lastContact->getPhone() ?></td>
+                    <td class="py-2 px-4 border-b text-center"><?= $lastContact->getEmail() ?></td>
+                    <td class="py-2 px-4 border-b text-center"></td>
+                    <td class="py-2 px-4 border-b text-center"><?= $lastContact->getCreated_at() ?></td>
+                </tr>
+            <?php endforeach; ?>
         </thead>
 </table>
 <span class="relative inline-block m-4">
@@ -53,6 +65,16 @@ foreach ($home->lastInvoices as $lastInvoice){
                 <th class="py-2 px-4 border-b">Type</th>
                 <th class="py-2 px-4 border-b">Created at</th>
             </tr>
+            <?php foreach ($home->lastCompanies as $key => $lastCompany) : ?>
+                <?php $bgColorClass = $key % 2 == 0 ? 'bg-gray-100' : ''; ?>
+                <tr class="<?= $bgColorClass ?>">
+                    <td class="py-2 px-4 border-b text-center"><?= $lastCompany->getName() ?></td>
+                    <td class="py-2 px-4 border-b text-center"><?= $lastCompany->getTva() ?></td>
+                    <td class="py-2 px-4 border-b text-center"><?= $lastCompany->getCountry() ?></td>
+                    <td class="py-2 px-4 border-b text-center"><?= $lastCompany->getType() ?></td>
+                    <td class="py-2 px-4 border-b text-center"><?= $lastCompany->getCreated_at() ?></td>
+                </tr>
+            <?php endforeach; ?>
         </thead>
 </table>
 <span class="bg-blue-200 text-gray-800 p-4  flex justify-between items-center">
