@@ -33,11 +33,20 @@ class Database{
     //
     //FONCTION POUR RECUPERER CHAQUE TABLES AVEC COMME PARAM LE NOM DU TABLEAU ET LA CLASSE A CREER POUR AFFICHER LES DATAS
     //
-    protected function getTable($select, $table, $obj, $join, $column, $order){
+    protected function getTable($elemPerPage, $select, $table, $obj, $join, $column, $order){
 
         $tab = [];
 
-        $req = self::$_database->prepare('SELECT '.$select.' FROM '.$table. ' '.$join.' ORDER BY '.$column.' '.$order.'');
+        if (isset($_GET['page'])) {
+            $page = max(1, intval($_GET['page']));
+        } else {
+            $page = 1;
+        }
+        $ratio = round(($page - 1) * $elemPerPage);
+
+        $req = self::$_database->prepare('SELECT '.$select.' FROM '.$table. ' '.$join.' ORDER BY '.$column.' '.$order.' LIMIT :ratio, :elemPerPage');
+        $req->bindParam(':ratio', $ratio, PDO::PARAM_INT);
+        $req->bindParam(':elemPerPage', $elemPerPage, PDO::PARAM_INT);
         $req->execute();
         while($data = $req->fetch(PDO::FETCH_ASSOC)){
 
@@ -52,7 +61,7 @@ class Database{
         $req->closeCursor();
     }
 
-    protected function getSearch($select,$table,$obj){
+    /*protected function getSearch($select,$table,$obj){
 
         $tab = [];
 
@@ -72,7 +81,7 @@ class Database{
 
             return $tab;
         }
-    }
+    }*/
 
     protected function postSignup($table){
         if(isset($_POST['ok'])){
@@ -104,26 +113,5 @@ class Database{
             $resp = $req->fetchAll(PDO::FETCH_ASSOC);
         
         } 
-    }
-
-    //METHODE POUR DETERMINER LE NBR DE CONTACTS PAR PAGES
-    public function getPagination($elemPerPage, $select, $table, $column, $order, $offset)
-    {
-        $query = "SELECT $select FROM " . $table . " ORDER BY " . $column . " " . $order . " LIMIT $offset, $elemPerPage";
-        $result = self::$_database->prepare($query);
-
-        $result->execute();
-
-        return $result->fetchAll(PDO::FETCH_ASSOC);
-    }
-
-
-    //METHODE POUR DETERMINER LE NBR DE CONTACTS TOTALS
-    public function getTotalSearchs($table)
-    {
-        $query = "SELECT COUNT(*) AS total FROM " . $table . " ";
-        $result = self::$_database->query($query);
-        $total = $result->fetch(PDO::FETCH_ASSOC)['total'];
-        return $total;
     }
 }

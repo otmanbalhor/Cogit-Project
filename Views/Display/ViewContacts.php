@@ -16,7 +16,7 @@
         </thead>
         <tbody>
         <?php foreach ($contacts as $key => $contact) : ?>
-                <?php $bgColorClass = intval($key) % 2 == 0 ? 'bg-gray-100' : ''; ?>
+                <?php $bgColorClass = $key % 2 == 0 ? 'bg-gray-100' : ''; ?>
                 <tr class="<?= $bgColorClass ?>">
                     <td class="py-2 px-4 border-b text-center"><a href="showContact.php?id=<?= $contact->getId() ?>" class="hover:underline"><?= $contact->getName() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $contact->getPhone() ?></td>
@@ -30,9 +30,10 @@
     <div class="m-4 flex justify-center">
     <div class="space-x-2">
         <?php 
-            for ($i = 1; $i <= $totalPages; $i++) : ?>
-                <a href="?page=<?= $i ?>" class='px-4 py-2 bg-blue-500 text-white rounded transition hover:bg-blue-600'><?= $i ?></a>
-        <?php endfor ?>
+            for ($i = 1; $i <= 10; $i++) {
+                echo "<a href='#' class='px-4 py-2 bg-blue-500 text-white rounded transition hover:bg-blue-600'>$i</a>";
+            }
+        ?>
     </div>
 </div>
         </main>
