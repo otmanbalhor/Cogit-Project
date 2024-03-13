@@ -7,7 +7,7 @@ require_once('Views/View.php');
 
 class ControllerShowCompany{
 
-    private $_companiesManager;
+    private $_showCompanyManager;
     private $_view;
 
     public function __construct($url)
@@ -16,22 +16,22 @@ class ControllerShowCompany{
             throw new Exception('Page introuvable');
         }else{
 
-            $this->showcompany();
+            $this->showCompany();
         }
         
     }
 
-    private function showcompany(){
+    private function showCompany(){
 
-        $this->_companiesManager = new CompaniesManager;
+        $this->_showCompanyManager = new ShowCompanyManager;
 
         //
-        //INSTANCE DE CompaniesManagaer.php
+        //INSTANCE DE CompaniesManager.php
         //
-        $showcompany = $this->_companiesManager->getCompanies();
+        $showCompany = $this->_showCompanyManager->getCompanies();
 
-        $this->_view = new View('showcompany');
-        $this->_view->generate(array('showcompany' => $showcompany));
+        $this->_view = new View('ShowCompany');
+        $this->_view->generate(array('showCompany' => $showCompany));
 
     }
 }
