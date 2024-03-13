@@ -7,11 +7,11 @@
     <table class="min-w-full bg-white border border-gray-300 mx-auto">
         <thead>
             <tr class="bg-gray-700 text-white  m-4">
-                <th class="py-2 px-4 border-b">Name</th>
+                <th class="py-2 px-4 border-b"><form><input class="hover:cursor-pointer" value="Name" type="submit" name="CompaniesName"></form></th>
                 <th class="py-2 px-4 border-b">TVA</th>
                 <th class="py-2 px-4 border-b">Country</th>
                 <th class="py-2 px-4 border-b">Type</th>
-                <th class="py-2 px-4 border-b">Created at</th>
+                <th class="py-2 px-4 border-b"><form><input class="hover:cursor-pointer" value="Created at" type="submit" name="CompaniesDate"></form></th>
             </tr>
         </thead>
         <tbody>

@@ -61,7 +61,7 @@ if (isset($_GET["keywords"]) && !empty($_GET["keywords"])) {
             <?php foreach ($invoices as $key => $invoice) : ?>
                 <?php $bgColorClass = $key % 2 == 0 ? 'bg-gray-100' : ''; ?>
                 <tr class="<?= $bgColorClass ?>">
-                    <td class="py-2 px-4 border-b text-center"><a href="showInvoice.php?id=<?= $invoice->getId() ?>" class="hover:underline"><?= $invoice->getRef() ?></td>
+                    <td class="py-2 px-4 border-b text-center"><a href="showInvoice" class="hover:underline"><?= $invoice->getRef() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $invoice->getDue_date() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $invoice->getName() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $invoice->getCreated_at() ?></td>
