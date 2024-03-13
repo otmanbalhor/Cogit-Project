@@ -22,7 +22,7 @@
         <?php foreach ($companies as $key => $company) : ?>
                 <?php $bgColorClass = $key % 2 == 0 ? 'bg-gray-100' : ''; ?>
                 <tr class="<?= $bgColorClass ?>">
-                    <td class="py-2 px-4 border-b text-center"><a href="showCompany.php?id=<?= $company->getId() ?>" class="hover:underline"><?= $company->getName() ?></td>
+                    <td class="py-2 px-4 border-b text-center"><a href="showCompany" class="hover:underline"><?= $company->getName() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $company->getTva() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $company->getCountry() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $company->getType() ?></td>
