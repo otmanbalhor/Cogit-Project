@@ -4,11 +4,12 @@ class Contacts{
 
     private $_id;
     private $_name;
-    //private $_company_id;
+    private $_company_id;
     private $_email;
     private $_phone;
     private $_created_at;
     private $_update_at;
+    private $_companyName;
 
 
     public function __construct(array $data){
@@ -47,13 +48,13 @@ class Contacts{
 
     }
 
-    /*public function setCompany_id($company_id){
+    public function setCompany_id($company_id){
 
         if(is_int($company_id)){
 
             $this->_company_id = $company_id;
         }
-    }*/
+    }
 
     public function setEmail($email){
 
@@ -82,6 +83,11 @@ class Contacts{
          $this->_update_at = $dateUptade;
      }
 
+     public function setCompanyName($companyName){
+
+        $this->_companyName = $companyName;
+    }
+
      public function getId(){
 
         $id = $this->_id;
@@ -96,12 +102,12 @@ class Contacts{
         return $name;
      }
 
-     /*public function getCompany_id(){
+     public function getCompany_id(){
 
         $company_id = $this->_company_id;
 
         return $company_id;
-     }*/
+     }
 
      public function getEmail(){
 
@@ -131,6 +137,12 @@ class Contacts{
         return $dateUptade;
     }
 
+    public function getCompany_Name(){
+
+        $companyName = $this->_companyName;
+
+        return $companyName;
+    }
     
 
 

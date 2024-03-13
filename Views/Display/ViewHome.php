@@ -46,7 +46,7 @@
                     <td class="py-2 px-4 border-b text-center"><?= $lastContact->getName() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $lastContact->getPhone() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $lastContact->getEmail() ?></td>
-                    <td class="py-2 px-4 border-b text-center"></td>
+                    <td class="py-2 px-4 border-b text-center"><?= $lastContact->getCompany_Name() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $lastContact->getCreated_at() ?></td>
                 </tr>
             <?php endforeach; ?>

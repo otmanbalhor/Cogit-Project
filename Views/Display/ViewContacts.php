@@ -25,7 +25,7 @@
                     <td class="py-2 px-4 border-b text-center"><a href="showContact" class="hover:underline"><?= $contact->getName() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $contact->getPhone() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $contact->getEmail() ?></td>
-                    <td class="py-2 px-4 border-b text-center"></td>
+                    <td class="py-2 px-4 border-b text-center"><?= $contact->getCompany_Name() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $contact->getCreated_at() ?></td>
                 </tr>
             <?php endforeach; ?>
