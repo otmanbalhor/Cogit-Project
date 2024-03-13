@@ -71,7 +71,7 @@
                     <td class="py-2 px-4 border-b text-center"><?= $lastCompany->getName() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $lastCompany->getTva() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $lastCompany->getCountry() ?></td>
-                    <td class="py-2 px-4 border-b text-center"><?= $lastCompany->getType() ?></td>
+                    <td class="py-2 px-4 border-b text-center"><?= $lastCompany->getTypeName() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $lastCompany->getCreated_at() ?></td>
                 </tr>
             <?php endforeach; ?>

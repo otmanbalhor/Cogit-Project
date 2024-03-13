@@ -10,7 +10,7 @@ class Companies
     private $_tva;
     private $_created_at;
     private $_update_at;
-    private $_type;
+    private $_typeName;
     
     public function __construct(array $data)
     {
@@ -85,11 +85,11 @@ class Companies
         $this->_update_at = $dateUptade;
     }
 
-    public function setType($type){
+    public function setTypeName($typeName){
 
-        if(is_string($type)){
+        if(is_string($typeName)){
 
-            $this->_type_id = $type;
+            $this->_typeName = $typeName;
         }
     }
 
@@ -143,11 +143,11 @@ class Companies
         return $dateUptade;
     }
 
-    public function getType(){
+    public function getTypeName(){
 
-        $type = $this->_type;
+        $typeName = $this->_typeName;
 
-        return $type;
+        return $typeName;
     }
     
 
