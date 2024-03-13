@@ -37,7 +37,7 @@
 
                     $_SESSION['username'] = $user['firstname'];
 
-                    header('Location: ViewDashboard.php');
+                    //header('Location: ViewDashboard.php');
                     exit();
                 } else {
                     $erroMsg = "Email or password wrong!";

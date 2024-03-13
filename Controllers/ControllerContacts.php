@@ -30,6 +30,9 @@ class ControllerContacts{
         $contacts = $this->_contactsManager->getContacts();
 
         $this->_view = new View('Contacts');
+
         $this->_view->generate(array('contacts' => $contacts));
+
+        
     }
 }

@@ -150,9 +150,4 @@ class Companies
         return $typeName;
     }
     
-
-
-    
-
-
 }

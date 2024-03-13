@@ -22,7 +22,7 @@ class Router{
                 //Récupère tout les paramètres de manière séparé de l'url.
                 //filter_var 
                 $url = explode('/',filter_var($_GET['url'],FILTER_SANITIZE_URL));
-
+                
                 //ucfirst est la 1er lettre en maj de l'url et strtolower est le reste en minisucle
                 $controller = ucfirst(strtolower($url[0]));
 

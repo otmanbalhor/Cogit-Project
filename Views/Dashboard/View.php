@@ -7,26 +7,23 @@ class View
 
     public function __construct($action)
     {
-        $this->_file = 'Views/Display/View' .$action.'.php';
+        $this->_file = 'Views/Dashboard/Display/View' .$action.'.php';
     }
 
     public function generate($data)
     {
         $content = $this->generateFile($this->_file, $data);
 
-        $view = $this->generateFile('views/home.php', array('t' => $this->_t, 'content' => $content));
+        $viewDash = $this->generateFile('Views/Dashboard/home.php', array('t' => $this->_t, 'content' => $content));
 
-        echo $view;
+        echo $viewDash;
     }
 
     private function generateFile($file, $data)
     {
         if(file_exists($file))
         {
-            echo $file;
             extract($data);
-
-            
 
             ob_start();
 
