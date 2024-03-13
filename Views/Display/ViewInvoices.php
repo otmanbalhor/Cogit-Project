@@ -23,19 +23,17 @@ if (isset($_GET["keywords"]) && !empty($_GET["keywords"])) {
     $display = "yes";
 }
 ?>
-
-<body>
     <main class="m-8">
     <span class="relative inline-block m-4">
         <span class="absolute inset-y-10 right-0 w-1/2 h-1/2 bg-blue-500"></span>
         <span class="relative z-10 text-6xl font-extrabold leading-14 tracking-wide text-left m-8">All Invoices</span>
     </span>
-    <div class="">
-        <form class=" mb-4" action="" method="get" name="search">
-            <input class="border border-gray-300 rounded px-4 " type="search" name="keywords" value="" placeholder="Search company">
-            <input class="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-blue-700 duration-100 text-white font-bold py-2 px-4 rounded" type="submit" name="ok" value="search">
+   
+        <form class="flex justify-end mb-4 gap-4" action="" method="get" name="search">
+            <input class=" border border-gray-300 rounded px-4 " type="search" name="keywords" value="" placeholder="Search company">
+            <input class=" transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-blue-700 duration-100 text-white font-bold py-2 px-4 rounded" type="submit" name="ok" value="search">
         </form>
-    </div>
+  
     <?php if (@$display === "yes") {?>
     <div id="results">
         <div id="nbr"> <?= count($tab) ?></div>
