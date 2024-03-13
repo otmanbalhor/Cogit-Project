@@ -25,7 +25,7 @@
                     <td class="py-2 px-4 border-b text-center"><a href="showCompany" class="hover:underline"><?= $company->getName() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $company->getTva() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $company->getCountry() ?></td>
-                    <td class="py-2 px-4 border-b text-center"><?= $company->getType() ?></td>
+                    <td class="py-2 px-4 border-b text-center"><?= $company->getTypeName() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $company->getCreated_at() ?></td>
                 </tr>
             <?php endforeach; ?>
