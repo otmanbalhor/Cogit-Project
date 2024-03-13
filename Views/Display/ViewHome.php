@@ -1,4 +1,3 @@
-<body class=" ">
     <div class="bg-gray-700 text-white p-4  flex justify-between items-center">
         <p class="text-6xl font-extrabold ml-20 ">MANAGE YOUR CUSTOMERS AND INVOICES EASILY</p>
         <img class="rounded-full w-1/2 h-1/2 m-20" src="Assets/img/logo3.jpg" alt="">
