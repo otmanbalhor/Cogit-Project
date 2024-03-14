@@ -38,16 +38,19 @@ class Database
     //
     //FONCTION POUR RECUPERER CHAQUE TABLES AVEC COMME PARAM LE NOM DU TABLEAU ET LA CLASSE A CREER POUR AFFICHER LES DATAS
     //
-    protected function getTable($elemPerPage, $select, $table, $obj, $join, $column, $order)
+    protected function getTable($ratio, $elemPerPage, $select, $table, $obj, $join, $column, $order)
     {
 
         $tab = [];
+
+        $page = '';
 
         if (isset($_GET['page'])) {
             $page = max(1, intval($_GET['page']));
         } else {
             $page = 1;
         }
+
         $ratio = round(($page - 1) * $elemPerPage);
 
         $req = self::$_database->prepare('SELECT ' . $select . ' FROM ' . $table . ' ' . $join . ' ORDER BY ' . $column . ' ' . $order . ' LIMIT :ratio, :elemPerPage');

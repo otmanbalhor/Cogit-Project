@@ -16,22 +16,30 @@ class ControllerInvoices{
             throw new Exception('Page introuvable');
         }else{
 
-            $this->invoices();
+            if (isset($_GET['page'])){
+                $page = $_GET['page'] - 1;
+            } else {
+                $page = 0;
+            }
+            
+            $this->invoices($page);
         }
         
     }
 
-    private function invoices(){
+    private function invoices($page){
 
         $this->_invoicesManager = new InvoicesManager;
+
+        $totalinvoices = $this->_invoicesManager->getTotals();
 
         //
         //INSTANCE DE INVOICESMANAGER.PHP
         //
-        $invoices = $this->_invoicesManager->getInvoices();
+        $invoices = $this->_invoicesManager->getInvoices($page);
 
         $this->_view = new View('Invoices');
-        $this->_view->generate(array('invoices' => $invoices));
+        $this->_view->generate(array('invoices' => $invoices, 'totalInvoices' => $totalinvoices));
 
     }
 }

@@ -16,22 +16,30 @@ class ControllerCompanies{
             throw new Exception('Page introuvable');
         }else{
 
-            $this->companies();
+            if (isset($_GET['page'])){
+                $page = $_GET['page'] - 1;
+            } else {
+                $page = 0;
+            }
+
+            $this->companies($page);
         }
         
     }
 
-    private function companies(){
+    private function companies($page){
 
         $this->_companiesManager = new CompaniesManager;
 
-        //
-        //INSTANCE DE CompaniesManagaer.php
-        //
-        $companies = $this->_companiesManager->getCompanies();
+        $totalcompanies = $this->_companiesManager->getTotals();
 
+        //
+        //INSTANCE DE CompaniesManager.php
+        //
+        $companies = $this->_companiesManager->getCompanies($page);
+    
         $this->_view = new View('Companies');
-        $this->_view->generate(array('companies' => $companies));
+        $this->_view->generate(array('companies' => $companies, 'totalCompanies' => $totalcompanies));
 
     }
 }

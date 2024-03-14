@@ -15,23 +15,30 @@ class ControllerContacts{
             throw new Exception('Page introuvable');
         }else{
 
-            $this->contacts();
+            if (isset($_GET['page'])){
+                $page = $_GET['page'] - 1;
+            } else {
+                $page = 0;
+            }
+
+            $this->contacts($page);
         }
         
     }
 
-    private function contacts(){
+    private function contacts($page){
 
         $this->_contactsManager = new ContactsManager;
 
+        $totalcontacts = $this->_contactsManager->getTotals();
         //
         //INSTANCE DE CompaniesManagaer.php
         //
-        $contacts = $this->_contactsManager->getContacts();
+        $contacts = $this->_contactsManager->getContacts($page);
 
         $this->_view = new View('Contacts');
 
-        $this->_view->generate(array('contacts' => $contacts));
+        $this->_view->generate(array('contacts' => $contacts, 'totalContacts' => $totalcontacts));
 
         
     }

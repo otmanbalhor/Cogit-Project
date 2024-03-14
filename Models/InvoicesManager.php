@@ -2,11 +2,13 @@
 
 class InvoicesManager extends Database{
 
-    public function getInvoices(){
+    public function getInvoices($page){
 
         $this->getDatabase();
+
+        $start = $page * 10;
         
-        return $this->getTable(10, 'invoices.*, companies.name', 'invoices','Invoices', 'LEFT JOIN companies ON id_company = companies.id', 'created_at', 'asc');
+        return $this->getTable($start, 10, 'invoices.*, companies.name', 'invoices','Invoices', 'LEFT JOIN companies ON id_company = companies.id', 'created_at', 'asc');
     }
 
     public function getTotals(){
