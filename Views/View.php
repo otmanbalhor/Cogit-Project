@@ -23,10 +23,7 @@ class View
     {
         if(file_exists($file))
         {
-            echo $file;
             extract($data);
-
-            
 
             ob_start();
 

@@ -3,29 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./Assets/dist/output.css" rel="stylesheet">
     <title>DASHBOARD</title>
+    <link href="./Assets/src/output.css" rel="stylesheet">
 </head>
-<header>
-    <nav>
-        <div>
-            <img src="">
-            <p>Name</p>
-        </div>
-        <div>
-            <ul>
-                <li><a href="dashboard">Dashboard</a></li>
-                <li><a href="dashInvoices">Invoices</a></li>
-                <li><a href="dashCompanies">Companies</a></li>
-                <li><a href="dashContacts">Contacts</a></li>
+<body class="">
+    <header class="flex flex-r h-screen bg-gray-200">
+        <nav class="p-4">
+            <div class="mb-4 border-b pb-2">
+                <img src="#" class="w-12 h-12 rounded-full mb-2">
+                <p class="text-2xl font-bold text-gray-600"><?=$_SESSION["username"] ?></p>
+            </div>
+
+            <ul class="flex flex-col space-y-4">
+                <li>
+                    <a href="dashboard" class="text-gray-800 hover:underline">Dashboard</a>
+                </li>
+                <li>
+                    <a href="dashinvoices" class="text-gray-800 hover:underline">Invoices</a>
+                </li>
+                <li>
+                    <a href="dashcompanies" class="text-gray-800 hover:underline">Companies</a>
+                </li>
+                <li>
+                    <a href="dashcontacts" class="text-gray-800 hover:underline">Contacts</a>
+                </li>
             </ul>
+        </nav>
+        <div class="mt-auto p-4">
+            <a href="logout" class="text-gray-800 hover:underline">Log Out</a>
         </div>
-        
-        <div>
-            <a href="logout">Log Out</a>
-        </div>
-    </nav>
-</header>
+    </header>
+</body>
+</html>
 
 
   

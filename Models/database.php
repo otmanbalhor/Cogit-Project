@@ -1,28 +1,33 @@
 <?php
 
-class Database{
+class Database
+{
 
     private static $_database;
 
     //
     //INSTANCIE LA CONNEXION A LA DATABASE
     //
-    protected static function setDatabase(){
+    protected static function setDatabase()
+    {
 
-        self::$_database = new PDO (
-            "mysql:host=localhost;dbname=cogip;charset=utf8",'root',''
+        self::$_database = new PDO(
+            "mysql:host=localhost;dbname=cogip;charset=utf8",
+            'root',
+            ''
         );
 
-        self::$_database->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
+        self::$_database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
     }
 
 
     //
     //RECUPERE LA CONNEXION A LA DATABASE
     //
-    protected function getDatabase(){
+    protected function getDatabase()
+    {
 
-        if(self::$_database === null){
+        if (self::$_database === null) {
             self::setDatabase();
         }
 
@@ -33,7 +38,8 @@ class Database{
     //
     //FONCTION POUR RECUPERER CHAQUE TABLES AVEC COMME PARAM LE NOM DU TABLEAU ET LA CLASSE A CREER POUR AFFICHER LES DATAS
     //
-    protected function getTable($elemPerPage, $select, $table, $obj, $join, $column, $order){
+    protected function getTable($elemPerPage, $select, $table, $obj, $join, $column, $order)
+    {
 
         $tab = [];
 
@@ -44,17 +50,16 @@ class Database{
         }
         $ratio = round(($page - 1) * $elemPerPage);
 
-        $req = self::$_database->prepare('SELECT '.$select.' FROM '.$table. ' '.$join.' ORDER BY '.$column.' '.$order.' LIMIT :ratio, :elemPerPage');
+        $req = self::$_database->prepare('SELECT ' . $select . ' FROM ' . $table . ' ' . $join . ' ORDER BY ' . $column . ' ' . $order . ' LIMIT :ratio, :elemPerPage');
         $req->bindParam(':ratio', $ratio, PDO::PARAM_INT);
         $req->bindParam(':elemPerPage', $elemPerPage, PDO::PARAM_INT);
         $req->execute();
-        while($data = $req->fetch(PDO::FETCH_ASSOC)){
+        while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
 
             //
             //crée une nouvelle instance de l'objet invoices
             //
             $tab[] = new $obj($data);
-
         }
 
         return $tab;
@@ -83,8 +88,9 @@ class Database{
         }
     }*/
 
-    protected function postSignup($table){
-        if(isset($_POST['ok'])){
+    protected function postSignup($table)
+    {
+        if (isset($_POST['ok'])) {
 
             $firstname = $_POST["firstname"];
             $lastname = $_POST["lastname"];
@@ -94,11 +100,11 @@ class Database{
             $city = $_POST["city"];
             $country = $_POST["country"];
             $zip = $_POST["zip"];
-        
-            $req = self::$_database->prepare("INSERT INTO ".$table." VALUES (0, :firstname, :lastname, :email, :password, :phone, :city, :country, :zip)");
-        
+
+            $req = self::$_database->prepare("INSERT INTO " . $table . " VALUES (0, :firstname, :lastname, :email, :password, :phone, :city, :country, :zip)");
+
             $req->execute(
-        
+
                 array(
                     "firstname" => $firstname,
                     "lastname" => $lastname,
@@ -111,7 +117,55 @@ class Database{
                 )
             );
             $resp = $req->fetchAll(PDO::FETCH_ASSOC);
-        
-        } 
+        }
+    }
+
+    protected function login($table)
+    {
+
+        $erroMsg = "";
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $email = $_POST["email"];
+            $password = $_POST["password"];
+
+            if ($email != "" && $password != "") {
+                $req = self::$_database->prepare("SELECT * FROM $table WHERE email = :email");
+                $req->execute(array(
+                    "email" => $email
+                ));
+
+                $resp = $req->fetchAll(PDO::FETCH_ASSOC);
+
+                if (!empty($resp)) {
+                    $user = $resp[0];
+
+                    $hashedPwd = md5($password);
+
+                    if ($user['password'] == $hashedPwd) {
+
+                        session_start();
+
+                        $_SESSION['username'] = $user['firstname'];
+
+                        header('Location: dashboard');
+                        exit();
+                    } else {
+                        $erroMsg = "Email or password wrong!";
+                    }
+                } else {
+                    $erroMsg = "Email or password wrong!";
+                }
+
+                return $erroMsg;
+            }
+        }
+    }
+
+    public function getTotal($table)
+    {
+        $query = "SELECT COUNT(*) AS total FROM " . $table . " ";
+        $result = self::$_database->query($query);
+        $total = $result->fetch(PDO::FETCH_ASSOC)['total'];
+        return $total;
     }
 }

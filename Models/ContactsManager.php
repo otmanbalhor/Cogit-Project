@@ -9,4 +9,11 @@ class ContactsManager extends Database{
 
         return $this->getTable(10,'contacts.*, companies.name as companyName','contacts','Contacts','LEFT JOIN companies ON company_id = companies.id','id','asc');
     }
+
+    public function getTotals(){
+
+        $this->getDatabase();
+
+        return $this->getTotal('contacts');
+    }
 }

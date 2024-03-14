@@ -8,4 +8,11 @@ class InvoicesManager extends Database{
         
         return $this->getTable(10, 'invoices.*, companies.name', 'invoices','Invoices', 'LEFT JOIN companies ON id_company = companies.id', 'created_at', 'asc');
     }
+
+    public function getTotals(){
+
+        $this->getDatabase();
+
+        return $this->getTotal('invoices');
+    }
 }
