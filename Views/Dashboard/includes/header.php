@@ -6,7 +6,8 @@
     <title>DASHBOARD</title>
     <link href="./Assets/src/output.css" rel="stylesheet">
 </head>
-<body class="">
+<body class="flex flex-row">
+<div class="w-1/5 bg-gray-200 h-screen">
     <header class="flex flex-r h-screen bg-gray-200">
         <nav class="p-4">
             <div class="mb-4 border-b pb-2">
@@ -33,6 +34,7 @@
             <a href="logout" class="text-gray-800 hover:underline">Log Out</a>
         </div>
     </header>
+</div>
 </body>
 </html>
 
