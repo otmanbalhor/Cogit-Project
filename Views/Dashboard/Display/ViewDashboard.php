@@ -1,9 +1,13 @@
-<div class="w-4/5 bg-white m-8">
+<div class="w-full bg-white m-4">
+    <div class="relative flex flex-col m-8">
+        <div class="max-w-xl min-w-full mx-auto p-4">
     <span class="relative inline-block m-4">
         <span class="absolute inset-y-10 right-0 w-1/2 h-1/2 bg-[#f87171]"></span>
-        <span class="relative z-10 text-6xl font-extrabold leading-14 tracking-wide text-left m-8">DASHBOARD</span>
+        <span class="relative z-10 text-6xl font-extrabold leading-14 tracking-wide text-left">DASHBOARD</span>
     </span>
-
+    
+    </div>
+<div class="flex text-2xl font-bold max-w-xl min-w-full mx-auto bg-gray-200 rounded-lg p-4">
     <?php
     session_start();
 
@@ -17,19 +21,22 @@
         exit();
     }
     ?>
-<div class="w-full h-inline-block flex justify-center items-center">
-    <div class="grid grid-cols-2 gap-4 m-8 ">
+   </div> 
+   <img class="absolute right-0 w-1/8 h-1/8 rounded-full"src="Assets/img/dash_petit.jpg" alt="">
+    </div>
+<div class="grid grid-cols-1 m-8">
+    <div class="grid grid-cols-2 gap-4 ">
         <div class="max-w-xl min-w-full mx-auto bg-gray-200 rounded-lg p-4">
-            <h2 class="text-xl font-semibold mb-4">Statistics</h2>
-            <div class="flex justify-between p-4">
-                <p class="w-70 h-70 bg-blue-500 text-center text-white rounded-full p-4 "><?= $totalinvoices ?><br>invoices</p>
-                <p class="w-70 h-70 bg-[#a78bfa] text-center text-white rounded-full p-4 "><?= $totalcontacts ?><br>contacts</p>
-                <p class="w-70 h-70 bg-[#f87171] text-center text-white rounded-full p-4 "><?= $totalcompanies ?><br>companies</p>
+            <h2 class="text-xl font-bold mb-4">Statistics</h2>
+            <div class="flex flex-col gap-4 p-4">
+                <p class="w-full bg-blue-500 font-bold text-center text-white rounded-full p-4 "><?= $totalinvoices ?> invoices</p>
+                <p class="w-full bg-[#a78bfa] text-center font-bold text-white rounded-full p-4 "><?= $totalcontacts ?> contacts</p>
+                <p class="w-full bg-[#f87171] text-center font-bold text-white rounded-full p-4 "><?= $totalcompanies ?> companies</p>
             </div>
         </div>
 
         <div class="max-w-xl min-w-full mx-auto bg-gray-200 rounded-lg p-4">
-            <h2>Last Invoices</h2>
+            <h2 class="text-xl font-bold mb-4">Last Invoices</h2>
             <table class="min-w-full bg-white border border-gray-300 mx-auto">
                 <thead>
                     <tr class="bg-gray-700 text-white">
@@ -52,7 +59,7 @@
         </div>
 
         <div class="max-w-xl min-w-full mx-auto bg-gray-200 rounded-lg p-4">
-            <h2>Last Contacts</h2>
+            <h2 class="text-xl font-bold mb-4">Last Contacts</h2>
             <table class="min-w-full bg-white border border-gray-300 mx-auto">
                 <thead>
                     <tr class="bg-gray-700 text-white">
@@ -75,7 +82,7 @@
         </div>
 
         <div class="max-w-xl min-w-full mx-auto bg-gray-200 rounded-lg p-4">
-            <h2>Last Companies</h2>
+            <h2 class="text-xl font-bold mb-4">Last Companies</h2>
             <table class="min-w-full bg-white border border-gray-300 mx-auto">
                 <thead>
                     <tr class="bg-gray-700 text-white">

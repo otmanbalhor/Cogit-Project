@@ -708,12 +708,12 @@ video {
   width: 25%;
 }
 
-.w-12 {
-  width: 3rem;
+.w-1\/5 {
+  width: 20%;
 }
 
-.w-3\/4 {
-  width: 75%;
+.w-12 {
+  width: 3rem;
 }
 
 .w-6 {
@@ -728,12 +728,16 @@ video {
   min-width: 100%;
 }
 
-.max-w-md {
-  max-width: 28rem;
+.max-w-xl {
+  max-width: 36rem;
 }
 
 .flex-grow {
   flex-grow: 1;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .grid-cols-2 {
@@ -917,6 +921,11 @@ video {
   line-height: 2rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
@@ -943,10 +952,6 @@ video {
 
 .font-extrabold {
   font-weight: 800;
-}
-
-.font-semibold {
-  font-weight: 600;
 }
 
 .tracking-wide {
