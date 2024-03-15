@@ -11,7 +11,7 @@
     <table class="min-w-full bg-white border border-gray-300 mx-auto">
         <thead>
             <tr class="bg-gray-700 text-white  m-4">
-                <th class="py-2 px-4 border-b"><form><input class="hover:cursor-pointer" value="Name" type="submit" name="CompaniesName"></form></th>
+                <th class="py-2 px-4 border-b"><form><a href="?sortBy=Name">Name</a></form></th>
                 <th class="py-2 px-4 border-b">TVA</th>
                 <th class="py-2 px-4 border-b">Country</th>
                 <th class="py-2 px-4 border-b">Type</th>
@@ -34,8 +34,17 @@
     <div class="m-4 flex justify-center">
     <div class="space-x-2">
         <?php 
-            for ($i = 1; $i <= 10; $i++) {
-                echo "<a href='#' class='px-4 py-2 bg-blue-500 text-white rounded transition hover:bg-blue-600'>$i</a>";
+            $totalCompanies = ceil($totalCompanies/10);
+            for ($i = 1; $i <= $totalCompanies; $i++) {
+                if(isset($_GET['page']) && $_GET['page'] == $i){
+                    echo "<span class='px-4 py-2 bg-blue-800 text-white rounded'>$i</span>";
+                } else {
+                    if(!isset($_GET['page']) && $i == 1){
+                        echo "<span class='px-4 py-2 bg-blue-800 text-white rounded hover:cursor-pointer'>$i</span>";
+                    } else {
+                        echo "<a href='?page=$i' class='px-4 py-2 bg-blue-500 text-white rounded transition hover:bg-blue-600'>$i</a>";
+                    }
+                }
             }
         ?>
     </div>

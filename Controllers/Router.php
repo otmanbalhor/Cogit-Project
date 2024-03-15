@@ -38,8 +38,8 @@ class Router{
                     throw new Exception('Page introuvable');
                 }
             }else{
-                require_once('Controllers/ControllerCompanies.php');
-                $this->_ctrl = new ControllerCompanies($url);
+                require_once('Controllers/ControllerHome.php');
+                $this->_ctrl = new ControllerHome($url);
             }
 
         } catch (Exception $e) {

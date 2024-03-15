@@ -80,7 +80,6 @@
                 </tbody>
             </table>
         </div>
-
         <div class="max-w-xl min-w-full mx-auto bg-gray-200 rounded-lg p-4">
             <h2 class="text-xl font-bold mb-4">Last Companies</h2>
             <table class="min-w-full bg-white border border-gray-300 mx-auto">
@@ -104,5 +103,6 @@
             </table>
         </div>
     </div>
+
 </div>
 </div>

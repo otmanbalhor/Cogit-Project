@@ -38,16 +38,19 @@ class Database
     //
     //FONCTION POUR RECUPERER CHAQUE TABLES AVEC COMME PARAM LE NOM DU TABLEAU ET LA CLASSE A CREER POUR AFFICHER LES DATAS
     //
-    protected function getTable($elemPerPage, $select, $table, $obj, $join, $column, $order)
+    protected function getTable($ratio, $elemPerPage, $select, $table, $obj, $join, $column, $order)
     {
 
         $tab = [];
+
+        $page = '';
 
         if (isset($_GET['page'])) {
             $page = max(1, intval($_GET['page']));
         } else {
             $page = 1;
         }
+
         $ratio = round(($page - 1) * $elemPerPage);
 
         $req = self::$_database->prepare('SELECT ' . $select . ' FROM ' . $table . ' ' . $join . ' ORDER BY ' . $column . ' ' . $order . ' LIMIT :ratio, :elemPerPage');
@@ -167,5 +170,29 @@ class Database
         $result = self::$_database->query($query);
         $total = $result->fetch(PDO::FETCH_ASSOC)['total'];
         return $total;
+    }
+
+    protected function createElemDash($table)
+    {
+        if (isset($_POST['ok'])) {
+
+            $ref = $_POST["ref"];
+            var_dump($ref);
+            $price = $_POST["price"];
+            $company = $_POST["company_name"];
+            $updated_at = date("Y-m-d H:i:s");
+
+            $req = self::$_database->prepare("INSERT INTO " . $table . " VALUES (:ref, :price,:company_name)");
+
+            $req->execute(
+
+                array(
+                    "ref" => $ref,
+                    "price" => $price,
+                    "company_name" => $company
+                )
+            );
+            $resp = $req->fetchAll(PDO::FETCH_ASSOC);
+        }
     }
 }

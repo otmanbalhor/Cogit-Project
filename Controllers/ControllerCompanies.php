@@ -12,26 +12,34 @@ class ControllerCompanies{
 
     public function __construct($url)
     {
-        if(isset($url) && is_array($url) && count($url) > 1 ){
+        if(isset($url) && is_array($url) && count($url) > 2 ){
             throw new Exception('Page introuvable');
         }else{
 
-            $this->companies();
+            $page = 0;
+
+            if (isset($_GET['page']) && $_GET['page'] > 0){
+                $page = $_GET['page'] - 1;
+            }
+
+            $this->companies($page);
         }
         
     }
 
-    private function companies(){
+    private function companies($page){
 
         $this->_companiesManager = new CompaniesManager;
 
-        //
-        //INSTANCE DE CompaniesManagaer.php
-        //
-        $companies = $this->_companiesManager->getCompanies();
+        $totalcompanies = $this->_companiesManager->getTotals();
 
+        //
+        //INSTANCE DE CompaniesManager.php
+        //
+        $companies = $this->_companiesManager->getCompanies($page);
+    
         $this->_view = new View('Companies');
-        $this->_view->generate(array('companies' => $companies));
+        $this->_view->generate(array('companies' => $companies, 'totalCompanies' => $totalcompanies));
 
     }
 }
