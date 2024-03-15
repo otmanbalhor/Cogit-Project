@@ -12,14 +12,14 @@ class ControllerInvoices{
 
     public function __construct($url)
     {
-        if(isset($url) && is_array($url) && count($url) > 1 ){
+        if(isset($url) && is_array($url) && count($url) > 2 ){
             throw new Exception('Page introuvable');
         }else{
 
-            if (isset($_GET['page'])){
+            $page = 0;
+
+            if (isset($_GET['page']) && $_GET['page'] > 0){
                 $page = $_GET['page'] - 1;
-            } else {
-                $page = 0;
             }
             
             $this->invoices($page);

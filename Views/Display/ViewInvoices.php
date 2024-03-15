@@ -72,7 +72,15 @@ if (isset($_GET["keywords"]) && !empty($_GET["keywords"])) {
         <?php 
            $totalInvoices = ceil($totalInvoices/10);
            for ($i = 1; $i <= $totalInvoices; $i++) {
-               echo "<a href='./?page=$i' class='px-4 py-2 bg-blue-500 text-white rounded transition hover:bg-blue-600'>$i</a>";
+            if(isset($_GET['page']) && $_GET['page'] == $i){
+                echo "<span class='px-4 py-2 bg-blue-800 text-white rounded'>$i</span>";
+            } else {
+                if(!isset($_GET['page']) && $i == 1){
+                    echo "<span class='px-4 py-2 bg-blue-800 text-white rounded hover:cursor-pointer'>$i</span>";
+                } else {
+                    echo "<a href='?page=$i' class='px-4 py-2 bg-blue-500 text-white rounded transition hover:bg-blue-600'>$i</a>";
+                }
+            }
            }
         ?>
     </div>
