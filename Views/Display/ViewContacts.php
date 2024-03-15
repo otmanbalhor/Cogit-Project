@@ -37,7 +37,7 @@
             $totalContacts = ceil($totalContacts/10);
             for ($i = 1; $i <= $totalContacts; $i++) {
                 if(isset($_GET['page']) && $_GET['page'] == $i){
-                    echo "<span class='px-4 py-2 bg-blue-800 text-white rounded'>$i</span>";
+                    echo "<span class='px-4 py-2 bg-blue-800 text-white rounded hover:cursor-pointer'>$i</span>";
                 } else {
                     if(!isset($_GET['page']) && $i == 1){
                         echo "<span class='px-4 py-2 bg-blue-800 text-white rounded hover:cursor-pointer'>$i</span>";
