@@ -8,7 +8,8 @@ if (isset($_SESSION["username"])){
 
     $username = $_SESSION["username"];
 
-    echo "Welcome back " . $username;
+    echo "<div><p>Welcome back $username!</p><p>You can here add an invoice, a company
+    and some contacts</p></div>";
 }else{
 
 header("Location: ViewLogin.php");
@@ -17,7 +18,6 @@ exit();
 
 ?>
 
-<h1 class="text-2xl">DASHBOARD</h1>
 
 <div>
     <h2>Statistics</h2>

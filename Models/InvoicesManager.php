@@ -15,4 +15,11 @@ class InvoicesManager extends Database{
 
         return $this->getTotal('invoices');
     }
+
+    public function getDashinvoices(){
+
+        $this->getDatabase();
+
+        return $this->createElemDash('invoices');
+    }
 }

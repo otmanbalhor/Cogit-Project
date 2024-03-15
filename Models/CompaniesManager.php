@@ -16,4 +16,5 @@ class CompaniesManager extends Database{
 
         return $this->getTotal('companies');
     }
+
 }
