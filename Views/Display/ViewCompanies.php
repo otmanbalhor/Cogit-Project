@@ -12,11 +12,11 @@
     <table class="min-w-full bg-white border border-gray-300 mx-auto">
         <thead>
             <tr class="bg-gray-700 text-white  m-4">
-                <th class="py-2 px-4 border-b"><form><a href="?sortBy=Name">Name</a></form></th>
+                <th class="py-2 px-4 border-b"><a href="?Name=asc">Name</a></th>
                 <th class="py-2 px-4 border-b">TVA</th>
                 <th class="py-2 px-4 border-b">Country</th>
                 <th class="py-2 px-4 border-b">Type</th>
-                <th class="py-2 px-4 border-b"><form><input class="hover:cursor-pointer" value="Created at" type="submit" name="CompaniesDate"></form></th>
+                <th class="py-2 px-4 border-b"><a href="?Created_at=asc">Created at</a></th>
             </tr>
         </thead>
         <tbody>
