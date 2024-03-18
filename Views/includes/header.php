@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./Assets/src/output.css" rel="stylesheet">
     <title>COGIP</title>
+    <script>
+    // Vérifie la largeur de l'écran lors du chargement de la page et lorsque la fenêtre est redimensionnée
+    window.onload = checkWidth;
+    window.onresize = checkWidth;
+
+    function checkWidth() {
+        // Obtient la largeur de l'écran
+        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+        // Vérifie si la largeur de l'écran est inférieure à 620 pixels
+        if (screenWidth < 620) {
+            // Redirige vers la page d'erreur
+            window.location.href = "Views/Display/sizeError.html";
+        }
+    }
+</script>
+
 </head>
 <header>
     <nav class="bg-gray-700 text-white p-4  flex justify-between items-center 475:bg-red">
