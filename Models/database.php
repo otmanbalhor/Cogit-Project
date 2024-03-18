@@ -166,7 +166,7 @@ class Database
 
     public function getTotal($table)
     {
-        $query = "SELECT COUNT(*) AS total FROM " . $table . " ";
+        $query = "SELECT COUNT(*) AS total FROM $table";
         $result = self::$_database->query($query);
         $total = $result->fetch(PDO::FETCH_ASSOC)['total'];
         return $total;
@@ -177,22 +177,50 @@ class Database
         if (isset($_POST['ok'])) {
 
             $ref = $_POST["ref"];
-            var_dump($ref);
+            $created_at = date("Y-m-d H:i:s");
             $price = $_POST["price"];
-            $company = $_POST["company_name"];
-            $updated_at = date("Y-m-d H:i:s");
+            $company_name = $_POST["company_name"];
 
-            $req = self::$_database->prepare("INSERT INTO " . $table . " VALUES (:ref, :price,:company_name)");
+            $tab = [];
 
-            $req->execute(
+            $requete = self::$_database->prepare("
+            SELECT invoices.id, invoices.ref, invoices.created_at, invoices.update_at, companies.id AS id_company, companies.name AS company_name
+            FROM $table
+            INNER JOIN companies ON invoices.id_company = companies.id
+            WHERE companies.name = :companyName
+        ");
 
-                array(
+            $requete->execute(array(':companyName' => $company_name));
+
+            $invoices = $requete->fetchAll(PDO::FETCH_ASSOC);
+
+            if (!empty($invoices)) {
+
+                $updated_at = date("Y-m-d H:i:s");
+        
+                $req = self::$_database->prepare("
+                    INSERT INTO $table (ref, created_at, update_at, id_company, price)
+                    VALUES (:ref, :created_at, :update_at, :id_company, :price)
+                ");
+        
+                $company_id = $invoices[0]['id_company'];
+        
+                $req->execute(array(
                     "ref" => $ref,
-                    "price" => $price,
-                    "company_name" => $company
-                )
-            );
-            $resp = $req->fetchAll(PDO::FETCH_ASSOC);
+                    "created_at" => $created_at,
+                    "update_at" => $updated_at,
+                    "id_company" => $company_id,
+                    "price" => $price
+                ));
+
+                $resp = $req->fetchAll(PDO::FETCH_ASSOC);
+        
+                
+            } else {
+                
+                echo "Aucune entreprise trouvée avec le nom fourni.";
+            }
+            
         }
     }
 }

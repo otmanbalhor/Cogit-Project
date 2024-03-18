@@ -19,11 +19,9 @@ class ControllerDashinvoices{
 
     private function dashinvoices(){
 
-        $this->_dashbinvoicesManager = new InvoicesManager;
+        $this->_dashinvoicesManager = new InvoicesManager;
 
-        $dashinvoices = $this->_dashbinvoicesManager->getDashinvoices();
-
-        var_dump($dashinvoices);
+        $dashinvoices = $this->_dashinvoicesManager->getDashinvoices();
 
         $this->_view = new View('Dashinvoices');
         $this->_view->generate(array('dashinvoices' => $dashinvoices));
