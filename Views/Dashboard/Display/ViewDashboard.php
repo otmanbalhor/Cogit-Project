@@ -1,4 +1,4 @@
-<div class="w-full bg-white m-4">
+<div class="w-full bg-white m-4 ">
     <div class="relative flex flex-col m-8">
         <div class="max-w-xl min-w-full mx-auto p-4">
     <span class="relative inline-block m-4">

@@ -2,7 +2,8 @@
 module.exports = {
   content: ["./src//*.{php,html,js}",
             "./index.php",
-            "./Views/**/*.php"
+            "./Views/**/*.php",
+            "./Views/Display/sizeError.html"
           ],
   presets: [],
   darkMode: 'media', // or 'class'

@@ -1,4 +1,5 @@
-<body>
+<body class="flex flex-col h-screen">
+    <div class="flex-grow">
 <main class="m-8">
 <span class="relative inline-block m-4">
   <span class="absolute inset-y-10 right-0 w-1/2 h-1/2 bg-blue-500"></span>
@@ -50,5 +51,5 @@
     </div>
 </div>
         </main>
-
+</div>
 </body>
