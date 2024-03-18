@@ -12,26 +12,34 @@ class ControllerInvoices{
 
     public function __construct($url)
     {
-        if(isset($url) && is_array($url) && count($url) > 1 ){
+        if(isset($url) && is_array($url) && count($url) > 2 ){
             throw new Exception('Page introuvable');
         }else{
 
-            $this->invoices();
+            $page = 0;
+
+            if (isset($_GET['page']) && $_GET['page'] > 0){
+                $page = $_GET['page'] - 1;
+            }
+            
+            $this->invoices($page);
         }
         
     }
 
-    private function invoices(){
+    private function invoices($page){
 
         $this->_invoicesManager = new InvoicesManager;
+
+        $totalinvoices = $this->_invoicesManager->getTotals();
 
         //
         //INSTANCE DE INVOICESMANAGER.PHP
         //
-        $invoices = $this->_invoicesManager->getInvoices();
+        $invoices = $this->_invoicesManager->getInvoices($page);
 
         $this->_view = new View('Invoices');
-        $this->_view->generate(array('invoices' => $invoices));
+        $this->_view->generate(array('invoices' => $invoices, 'totalInvoices' => $totalinvoices));
 
     }
 }

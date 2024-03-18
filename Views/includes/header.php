@@ -8,7 +8,7 @@
     <title>COGIP</title>
 </head>
 <header>
-    <nav class="bg-gray-700 text-white p-4  flex justify-between items-center">
+    <nav class="bg-gray-700 text-white p-4  flex justify-between items-center 475:bg-red">
         <h1 class="text-2xl font-bold m-6 mr-10">COGIP</h1>
 
         <div class="nav-links flex-grow text-center">

@@ -3,4 +3,4 @@
 <?= $content ?>
 
 
-<?php require 'Views/Dashboard/includes/footer.php'?>
+<!-- <?php require 'Views/Dashboard/includes/footer.php'?> -->
