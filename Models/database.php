@@ -174,12 +174,11 @@ class Database
         if (isset($_POST['ok'])) {
 
             $ref = $_POST["ref"];
-            var_dump($ref);
             $price = $_POST["price"];
             $company = $_POST["company_name"];
             $updated_at = date("Y-m-d H:i:s");
 
-            $req = self::$_database->prepare("INSERT INTO " . $table . " VALUES (:ref, :price,:company_name)");
+            $req = self::$_database->prepare("INSERT INTO $table VALUES (:ref, :created_at, :update_at, :price)");
 
             $req->execute(
 
