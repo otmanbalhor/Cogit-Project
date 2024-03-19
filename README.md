@@ -1,4 +1,4 @@
-# Cogit-Project
+# Cogip-Project
 
 Ce projet a été réalisé par une équipe de développement passionnée, avec pour objectif principal de répondre aux besoins d'une équipe comptable de l'entreprise COGIP. Nous sommes fiers de           présenter cette application web qui vise à améliorer l'efficacité et la convivialité des outils utilisés au quotidien.
 
@@ -51,5 +51,6 @@ Responsable de la gestion du projet, y compris la répartition des tâches et le
 
 [Home page](https://ibb.co/s9dcSCY)
 
-[Dashboard](https://ibb.co/rZxVn5k)
+![image](https://github.com/otmanbalhor/Cogip-Project/assets/151639975/069cc1c2-88d6-42e3-98e6-c4c4215aac85)
+
     
