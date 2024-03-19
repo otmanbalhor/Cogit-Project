@@ -8,6 +8,7 @@ class Invoices{
     private $created_at;
     private $update_at;
     private $name;
+    private $_price;
 
      //
     //CETTE FONCTION VA NOUS RENVOYER AUX SETTERS POUR METTRE A JOUR LES DATAS RECUPERES SUR LES PROPRIETES AU DESSUS MAIS AVEC CERTAINS CONDITIONS
@@ -45,6 +46,14 @@ class Invoices{
 
             $this->_id = $id;
         }
+    }
+
+    public function setPrice($price){
+
+        $price = (float) $price;
+
+        $this->_price = $price;
+        
     }
 
     public function setDue_date($due_date){
@@ -116,6 +125,13 @@ class Invoices{
         $companyName = $this->name;
 
         return $companyName;
+    }
+
+    public function getPrice(){
+
+        $price = $this->_price;
+
+        return $price;
     }
 
 }

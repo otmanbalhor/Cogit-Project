@@ -18,4 +18,11 @@ class ContactsManager extends Database{
 
         return $this->getTotal('contacts');
     }
+
+    public function getDashcontacts(){
+
+        $this->getDatabase();
+
+        return $this->createElemDashcont('contacts');
+    }
 }

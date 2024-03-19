@@ -20,4 +20,11 @@ class CompaniesManager extends Database{
         return $this->getTotal('companies');
     }
 
+    public function getDashcompanies(){
+
+        $this->getDatabase();
+
+        return $this->createElemDashcomp('companies');
+    }
+
 }

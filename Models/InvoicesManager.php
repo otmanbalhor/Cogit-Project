@@ -2,6 +2,8 @@
 
 class InvoicesManager extends Database{
 
+    private $_login;
+
     public function getInvoices($page){
 
         $this->getDatabase();
@@ -22,6 +24,14 @@ class InvoicesManager extends Database{
 
         $this->getDatabase();
 
-        return $this->createElemDash('invoices');
+        return $this->createElemDashin('invoices');
     }
+
+    public function log(){
+
+        $this->getDatabase();
+
+        return $this->login("signup");
+    }
+
 }

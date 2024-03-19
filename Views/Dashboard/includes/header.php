@@ -39,7 +39,7 @@
             </ul>
         </nav>
         <div class="p-4 mt-auto">
-            <a href="logout" class="transition ease-in-out delay-150 bg-red-500 hover:-translate-y-1 hover:scale-110 hover:bg-red-700 duration-100 text-gray-600 font-bold py-2 px-4 rounded"">Log Out</a>
+            <a href="login" class="transition ease-in-out delay-150 bg-red-500 hover:-translate-y-1 hover:scale-110 hover:bg-red-700 duration-100 text-gray-600 font-bold py-2 px-4 rounded"">Log Out</a>
         </div>
     </header>
 </div>
