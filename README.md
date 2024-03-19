@@ -49,6 +49,7 @@ Responsable de la gestion du projet, y compris la répartition des tâches et le
     
    Merci de visiter notre projet !
 
-[Cogip](https://ibb.co/s9dcSCY) 
+[Cogip](https://ibb.co/s9dcSCY)
+
 [Dashboard](https://ibb.co/rZxVn5k)
     
