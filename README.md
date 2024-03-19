@@ -1,6 +1,6 @@
 # Cogit-Project
 
-    Ce projet a été réalisé par une équipe de développement passionnée, avec pour objectif principal de répondre aux besoins d'une équipe comptable de l'entreprise COGIP. Nous sommes fiers de           présenter cette application web qui vise à améliorer l'efficacité et la convivialité des outils utilisés au quotidien.
+Ce projet a été réalisé par une équipe de développement passionnée, avec pour objectif principal de répondre aux besoins d'une équipe comptable de l'entreprise COGIP. Nous sommes fiers de           présenter cette application web qui vise à améliorer l'efficacité et la convivialité des outils utilisés au quotidien.
 
 L'équipe
 
