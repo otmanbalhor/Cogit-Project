@@ -49,5 +49,5 @@ Responsable de la gestion du projet, y compris la répartition des tâches et le
     
    Merci de visiter notre projet !
 
-![img](https://ibb.co/s9dcSCY)
+![img]([https://ibb.co/s9dcSCY](https://ibb.co/s9dcSCY)https://ibb.co/s9dcSCY)
     
