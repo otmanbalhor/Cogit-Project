@@ -6,15 +6,15 @@ Ce projet a été réalisé par une équipe de développement passionnée, avec 
 
 ### Chef de Projet
 
-  [Otmanr Balhor]:
+  Otmanr Balhor:
     
 Responsable de la gestion du projet, y compris la répartition des tâches et le suivi du progrès. Utilisation de méthodes agiles et d'outils de gestion de projet pour assurer la réussite du             projet.
 
-Développeurs Backend
+### Développeurs Backend
 
-  [Otmanr Balhor]: 
+  [Otmanr Balhor](https://github.com/otmanbalhor): 
     
-    Responsable du développement côté serveur, en utilisant PHP avec une approche orientée objet (POO) et en suivant la structure MVC. A également géré la mise en place de la base de données SQL        et des fonctionnalités CRUD.
+  Responsable du développement côté serveur, en utilisant PHP avec une approche orientée objet (POO) et en suivant la structure MVC. A également géré la mise en place de la base de données SQL        et des fonctionnalités CRUD.
     
   [Denis Mathieu]:
     
