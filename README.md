@@ -6,13 +6,13 @@ Ce projet a été réalisé par une équipe de développement passionnée, avec 
 
 ### Chef de Projet
 
-  [Otmanr Balhor](https://github.com/otmanbalhor):
+  [Otman Balhor](https://github.com/otmanbalhor):
     
 Responsable de la gestion du projet, y compris la répartition des tâches et le suivi du progrès. Utilisation de méthodes agiles et d'outils de gestion de projet pour assurer la réussite du             projet.
 
 ### Développeurs Backend
 
-  [Otmanr Balhor](https://github.com/otmanbalhor): 
+  [Otman Balhor](https://github.com/otmanbalhor): 
     
   Responsable du développement côté serveur, en utilisant PHP avec une approche orientée objet (POO) et en suivant la structure MVC. A également géré la mise en place de la base de données SQL        et des fonctionnalités CRUD.
     
@@ -49,7 +49,8 @@ Responsable de la gestion du projet, y compris la répartition des tâches et le
     
    Merci de visiter notre projet !
 
-[Home page](https://ibb.co/s9dcSCY)
+![image](https://github.com/otmanbalhor/Cogip-Project/assets/151639975/4ffb9998-18c9-4414-8a98-ad8a17e859d2)
+
 
 ![image](https://github.com/otmanbalhor/Cogip-Project/assets/151639975/069cc1c2-88d6-42e3-98e6-c4c4215aac85)
 
