@@ -9,7 +9,7 @@
 </head>
 <body class="flex flex-row h-screen">
 <div class="w-1/5 bg-gray-200">
-    <header class="flex flex-col justify-between h-full bg-gray-200">
+    <header class="flex flex-col justify-between h-auto bg-gray-200">
         <nav class="p-4">
             <div class="w-full mb-4 pb-2 border-b border-gray-400">
             
