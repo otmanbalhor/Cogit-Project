@@ -2,13 +2,13 @@
 
 Ce projet a été réalisé par une équipe de développement passionnée, avec pour objectif principal de répondre aux besoins d'une équipe comptable de l'entreprise COGIP. Nous sommes fiers de           présenter cette application web qui vise à améliorer l'efficacité et la convivialité des outils utilisés au quotidien.
 
-L'équipe
+## L'équipe
 
-Chef de Projet
+### Chef de Projet
 
   [Otmanr Balhor]:
     
-    Responsable de la gestion du projet, y compris la répartition des tâches et le suivi du progrès. Utilisation de méthodes agiles et d'outils de gestion de projet pour assurer la réussite du             projet.
+Responsable de la gestion du projet, y compris la répartition des tâches et le suivi du progrès. Utilisation de méthodes agiles et d'outils de gestion de projet pour assurer la réussite du             projet.
 
 Développeurs Backend
 
