@@ -32,14 +32,14 @@ Responsable de la gestion du projet, y compris la répartition des tâches et le
 
 ## Difficultés rencontrées:
 
-  Complexité de la migration vers une architecture MVC :
-    La transition vers une structure MVC a demandé un certain temps d'adaptation à toute l'équipe, en particulier pour assurer une organisation claire du code et éviter les doublons.
+  ### Complexité de la migration vers une architecture MVC :
+  La transition vers une structure MVC a demandé un certain temps d'adaptation à toute l'équipe, en particulier pour assurer une organisation claire du code et éviter les doublons.
 
-  Intégration de la base de données : 
-    La création et la gestion de la base de données SQL ont posé des problèmes, en particulier pour garantir la cohérence des données et optimiser les requêtes pour des performances optimales.
+  ### Intégration de la base de données : 
+  La création et la gestion de la base de données SQL ont posé des problèmes, en particulier pour garantir la cohérence des données et optimiser les requêtes pour des performances optimales.
 
-  Collaboration et communication au sein de l'équipe : 
-    Travailler sur un projet collaboratif avec des membres d'une équipe diverse peut présenter des défis en termes de communication et de coordination, en particulier lorsque des problèmes              techniques surviennent.
+  ### Collaboration et communication au sein de l'équipe : 
+  Travailler sur un projet collaboratif avec des membres d'une équipe diverse peut présenter des défis en termes de communication et de coordination, en particulier lorsque des problèmes              techniques surviennent.
 
   Malgré ces défis, l'équipe a réussi à surmonter les obstacles et à livrer une application fonctionnelle répondant aux besoins de l'entreprise COGIP.
 
