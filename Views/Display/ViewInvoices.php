@@ -65,7 +65,6 @@ if (isset($_GET["keywords"]) && !empty($_GET["keywords"])) {
                     <td class="py-2 px-4 border-b text-center"><?= $invoice->getDue_date() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $invoice->getName() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $invoice->getCreated_at() ?></td>
-                    <td class="py-2 px-4 border-b text-center"><?= $invoice->getPrice() ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
