@@ -1,3 +1,13 @@
+<div class="w-full bg-white m-4 ">
+    <div class="relative flex flex-col m-8">
+        <div class="max-w-xl min-w-full mx-auto p-4">
+    <span class="relative inline-block m-4">
+        <span class="absolute inset-y-10 right-0 w-1/2 h-1/2 bg-[#f87171]"></span>
+        <span class="relative z-10 text-6xl font-extrabold leading-14 tracking-wide text-left">NEW INVOICE</span>
+    </span>
+    
+    </div>
+<div class="flex text-2xl font-bold max-w-xl min-w-full mx-auto bg-gray-200 rounded-lg p-4">
 <?php
 
 if(session_status() !== PHP_SESSION_ACTIVE){
