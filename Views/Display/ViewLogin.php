@@ -39,5 +39,5 @@
 </main>
 <span class="bg-blue-200 text-gray-800 p-4  flex justify-between items-center">
 <p class="text-6xl font-extrabold ml-20 ">WORK BETTER IN YOUR COMPANY</p>
-<img class="rounded-full w-1/4 h-1/4 m-20" src="Assets/img/logo.jpg" alt="">   
+<img class="rounded-full w-1/4 m-20" src="Assets/img/logo.jpg" alt="">   
 </span>

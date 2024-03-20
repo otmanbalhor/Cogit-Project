@@ -1,6 +1,6 @@
     <div class="bg-gray-700 text-white p-4  flex justify-between items-center">
         <p class="text-6xl font-extrabold ml-20 ">MANAGE YOUR CUSTOMERS AND INVOICES EASILY</p>
-        <img class="rounded-full w-1/2 h-1/2 m-20" src="Assets/img/logo3.jpg" alt="">
+        <img class="rounded-full w-1/2 m-20" src="Assets/img/logo3.jpg" alt="">
     </div>
     <main class="m-8">
 <span class="relative inline-block m-8">
@@ -80,5 +80,5 @@
 </main>
 <span class="bg-blue-200 text-gray-800 p-4  flex justify-between items-center">
 <p class="text-6xl font-extrabold ml-20 ">WORK BETTER IN YOUR COMPANY</p>
-<img class="rounded-full w-1/2 h-1/2 m-20" src="Assets/img/logo.jpg" alt="">   
+<img class="rounded-full w-1/2 m-20" src="Assets/img/logo.jpg" alt="">   
 </span>
