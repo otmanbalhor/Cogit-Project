@@ -15,7 +15,7 @@
                 <th class="py-2 px-4 border-b">Company</th>
                 <th class="py-2 px-4 border-b">Created at</th>
             </tr>
-            <?php foreach ($home->lastInvoices as $key => $lastInvoice) : ?>
+            <?php  foreach ($home->lastInvoices as $key => $lastInvoice) : ?>
                 <?php $bgColorClass = $key % 2 == 0 ? 'bg-gray-100' : ''; ?>
                 <tr class="<?= $bgColorClass ?>">
                     <td class="py-2 px-4 border-b text-center"><?= $lastInvoice->getRef() ?></td>

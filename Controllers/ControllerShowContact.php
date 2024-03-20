@@ -1,13 +1,10 @@
 <?php
 
-//
-//
-//
 require_once('Views/View.php');
 
 class ControllerShowContact{
 
-    private $_ContactsManager;
+    private $_ShowContactsManager;
     private $_view;
 
     public function __construct($url)
@@ -23,12 +20,12 @@ class ControllerShowContact{
 
     private function showContact(){
 
-        $this->_ContactsManager = new ContactsManager;
+        $this->_ShowContactsManager = new HomeManager;
 
         //
         //INSTANCE DE CONTACTSMANAGER.PHP
         //
-        $showContact = $this->_ContactsManager->getContacts();
+        $showContact = $this->_ShowContactsManager->getHome();
 
         $this->_view = new View('showContact');
         $this->_view->generate(array('showContact' => $showContact));

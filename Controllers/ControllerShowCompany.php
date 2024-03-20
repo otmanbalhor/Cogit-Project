@@ -1,8 +1,5 @@
 <?php
 
-//
-//
-//
 require_once('Views/View.php');
 
 class ControllerShowCompany{
@@ -26,9 +23,9 @@ class ControllerShowCompany{
         $this->_showCompanyManager = new ShowCompanyManager;
 
         //
-        //INSTANCE DE CompaniesManager.php
+        //INSTANCE DE ShowCompaniesManager.php
         //
-        $showCompany = $this->_showCompanyManager->getCompanies();
+        $showCompany = $this->_showCompanyManager->getCompany();
 
         $this->_view = new View('ShowCompany');
         $this->_view->generate(array('showCompany' => $showCompany));

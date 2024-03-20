@@ -16,12 +16,12 @@
                 <th class="py-2 px-4 border-b">Due date</th>
                 <th class="py-2 px-4 border-b">Company</th>
             </tr>
-            <?php foreach ($showCompany-> $lastInv as $key => $lastInvoic) : ?>
+            <?php foreach ($showCompany->lastInvoices as $key => $lastInvoice) : ?>
                 <?php $bgColorClass = $key % 2 == 0 ? 'bg-gray-100' : ''; ?>
                 <tr class="<?= $bgColorClass ?>">
-                    <td class="py-2 px-4 border-b text-center"><?= $lastInvoic->getRef() ?></td>
-                    <td class="py-2 px-4 border-b text-center"><?= $lastInvoic->getDue_date() ?></td>
-                    <td class="py-2 px-4 border-b text-center"><?= $lastInvoic->getName() ?></td>
+                    <td class="py-2 px-4 border-b text-center"><?= $lastInvoice->getRef() ?></td>
+                    <td class="py-2 px-4 border-b text-center"><?= $lastInvoice->getDue_date() ?></td>
+                    <td class="py-2 px-4 border-b text-center"><?= $lastInvoice->getName() ?></td>
                 </tr>
             <?php endforeach; ?>
         </thead>
