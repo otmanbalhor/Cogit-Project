@@ -4,7 +4,7 @@ Ce projet a été réalisé par une équipe de développement passionnée, avec 
 
 ## L'équipe
 
-### Chef de Projet
+### Project Manager
 
   [Otman Balhor](https://github.com/otmanbalhor):
     
