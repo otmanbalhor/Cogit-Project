@@ -1,4 +1,4 @@
-
+<div class="flex-1 flex-grow">
 <main class="m-8">
         <span class="relative inline-block m-4">
             <span class="absolute inset-y-10 right-0 w-1/2 h-1/2 bg-blue-500"></span>
@@ -17,7 +17,7 @@
                 <th class="py-2 px-4 border-b">Company</th>
                 <th class="py-2 px-4 border-b">Created at</th>
             </tr>
-            <?php foreach ($showCompany-> $lastInv as $key => $lastInvoice) : ?>
+            <?php foreach ($showCompany->lastInvoices as $key => $lastInvoice) : ?>
                 <?php $bgColorClass = $key % 2 == 0 ? 'bg-gray-100' : ''; ?>
                 <tr class="<?= $bgColorClass ?>">
                     <td class="py-2 px-4 border-b text-center"><?= $lastInvoice->getRef() ?></td>
@@ -29,7 +29,5 @@
         </thead>
 
 </table>
-    </main>
-    
-
-</body>
+</main>
+</div>

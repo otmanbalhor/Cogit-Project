@@ -2,13 +2,23 @@
 
 class InvoicesManager extends Database{
 
-    public function getInvoices($page){
+    public function getInvoices($page, $sort){
 
         $this->getDatabase();
 
         $start = $page * 10;
+
+        $sortBy = 'created_at';
+        $order = 'asc';
+
+        if ($sort == 'dateasc'){
+            $sortBy = 'created_at';
+        } else if ($sort == 'datedesc'){
+            $sortBy = 'created_at';
+            $order = 'desc';
+        }
         
-        return $this->getTable($start, 10, 'invoices.*, companies.name', 'invoices','Invoices', 'LEFT JOIN companies ON id_company = companies.id', 'created_at', 'asc');
+        return $this->getTable($start, 10, 'invoices.*, companies.name', 'invoices','Invoices', 'LEFT JOIN companies ON id_company = companies.id', $sortBy, $order);
     }
 
     public function getTotals(){

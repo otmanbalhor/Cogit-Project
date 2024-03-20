@@ -1,4 +1,3 @@
-<body class="flex flex-col h-screen">
     <div class="flex-grow">
 <main class="m-8">
 <span class="relative inline-block m-4">
@@ -12,11 +11,11 @@
     <table class="min-w-full bg-white border border-gray-300 mx-auto">
         <thead>
             <tr class="bg-gray-700 text-white  m-4">
-                <th class="py-2 px-4 border-b">Name</th>
+                <th class="py-2 px-4 border-b"><span class="hover:cursor-pointer" id="sortName">Name</span></th>
                 <th class="py-2 px-4 border-b">Phone</th>
                 <th class="py-2 px-4 border-b">Mail</th>
                 <th class="py-2 px-4 border-b">Company</th>
-                <th class="py-2 px-4 border-b">Created at</th>
+                <th class="py-2 px-4 border-b"><span class="hover:cursor-pointer" id="sortDate">Created at</span></th>
             </tr>
         </thead>
         <tbody>
@@ -43,7 +42,7 @@
                     if(!isset($_GET['page']) && $i == 1){
                         echo "<span class='px-4 py-2 bg-blue-800 text-white rounded hover:cursor-pointer'>$i</span>";
                     } else {
-                        echo "<a href='?page=$i' class='px-4 py-2 bg-blue-500 text-white rounded transition hover:bg-blue-600'>$i</a>";
+                        echo "<span class='pageLink px-4 py-2 bg-blue-500 text-white rounded transition hover:bg-blue-600 hover:cursor-pointer'>$i</span>";
                     }
                 }
             }
@@ -52,4 +51,4 @@
 </div>
         </main>
         </div>
-</body>
+        <script src="/Cogip-Project/Views/Display/sort.js" defer></script>

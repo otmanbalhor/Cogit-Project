@@ -1,4 +1,3 @@
-<body>
 <main class="m-8">
 <span class="relative inline-block m-4">
   <span class="absolute inset-y-10 right-0 w-1/2 h-1/2 bg-blue-500"></span>
@@ -38,7 +37,6 @@
     </div>
     </div>
 </main>
-</body>
 <span class="bg-blue-200 text-gray-800 p-4  flex justify-between items-center">
 <p class="text-6xl font-extrabold ml-20 ">WORK BETTER IN YOUR COMPANY</p>
 <img class="rounded-full w-1/4 h-1/4 m-20" src="Assets/img/logo.jpg" alt="">   

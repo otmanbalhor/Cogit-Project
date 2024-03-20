@@ -21,12 +21,20 @@ class ControllerContacts{
                 $page = $_GET['page'] - 1;
             }
 
-            $this->contacts($page);
+            $sort = null;
+
+            if (isset($_GET['name'])){
+                $sort = 'name'.$_GET['name'];
+            } else if (isset($_GET['date'])){
+                $sort = 'date'.$_GET['date'];
+            }
+
+            $this->contacts($page, $sort);
         }
         
     }
 
-    private function contacts($page){
+    private function contacts($page, $sort){
 
         $this->_contactsManager = new ContactsManager;
 
@@ -34,7 +42,7 @@ class ControllerContacts{
         //
         //INSTANCE DE CompaniesManagaer.php
         //
-        $contacts = $this->_contactsManager->getContacts($page);
+        $contacts = $this->_contactsManager->getContacts($page, $sort);
 
         $this->_view = new View('Contacts');
 

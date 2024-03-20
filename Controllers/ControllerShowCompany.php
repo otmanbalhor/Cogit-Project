@@ -16,19 +16,25 @@ class ControllerShowCompany{
             throw new Exception('Page introuvable');
         }else{
 
-            $this->showCompany();
+            if (isset($_GET['companyName'])){
+                $companyName = $_GET['companyName'];
+            } else {
+                $companyName = null;
+            }
+
+            $this->showCompany($companyName);
         }
         
     }
 
-    private function showCompany(){
+    private function showCompany($companyName){
 
         $this->_showCompanyManager = new ShowCompanyManager;
 
         //
         //INSTANCE DE CompaniesManager.php
         //
-        $showCompany = $this->_showCompanyManager->getCompanies();
+        $showCompany = $this->_showCompanyManager->getCompany($companyName);
 
         $this->_view = new View('ShowCompany');
         $this->_view->generate(array('showCompany' => $showCompany));

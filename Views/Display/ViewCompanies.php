@@ -12,18 +12,18 @@
     <table class="min-w-full bg-white border border-gray-300 mx-auto">
         <thead>
             <tr class="bg-gray-700 text-white  m-4">
-                <th class="py-2 px-4 border-b"><a href="?Name=asc">Name</a></th>
+                <th class="py-2 px-4 border-b"><span class="hover:cursor-pointer" id="sortName">Name</span></th>
                 <th class="py-2 px-4 border-b">TVA</th>
                 <th class="py-2 px-4 border-b">Country</th>
                 <th class="py-2 px-4 border-b">Type</th>
-                <th class="py-2 px-4 border-b"><a href="?Created_at=asc">Created at</a></th>
+                <th class="py-2 px-4 border-b"><span class="hover:cursor-pointer" id="sortDate">Created at</span></th>
             </tr>
         </thead>
         <tbody>
         <?php foreach ($companies as $key => $company) : ?>
                 <?php $bgColorClass = $key % 2 == 0 ? 'bg-gray-100' : ''; ?>
                 <tr class="<?= $bgColorClass ?>">
-                    <td class="py-2 px-4 border-b text-center"><a href="showCompany" class="hover:underline"><?= $company->getName() ?></td>
+                    <td class="py-2 px-4 border-b text-center"><a href="showCompany?companyName=<?=$company->getName()?>" class="hover:underline"><?= $company->getName() ?></a></td>
                     <td class="py-2 px-4 border-b text-center"><?= $company->getTva() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $company->getCountry() ?></td>
                     <td class="py-2 px-4 border-b text-center"><?= $company->getTypeName() ?></td>
@@ -43,7 +43,7 @@
                     if(!isset($_GET['page']) && $i == 1){
                         echo "<span class='px-4 py-2 bg-blue-800 text-white rounded hover:cursor-pointer'>$i</span>";
                     } else {
-                        echo "<a href='?page=$i' class='px-4 py-2 bg-blue-500 text-white rounded transition hover:bg-blue-600'>$i</a>";
+                        echo "<span class='pageLink px-4 py-2 bg-blue-500 text-white rounded transition hover:bg-blue-600 hover:cursor-pointer'>$i</span>";
                     }
                 }
             }
@@ -52,4 +52,5 @@
 </div>
         </main>
 </div>
+<script src="/Cogip-Project/Views/Display/sort.js" defer></script>
 </body>
