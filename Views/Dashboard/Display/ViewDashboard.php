@@ -22,7 +22,7 @@
     }
     ?>
    </div> 
-   <img class="absolute right-0 w-1/8 h-1/8 rounded-full"src="Assets/img/dash_petit.jpg" alt="">
+   <img class="absolute right-0 w-1/8 rounded-full"src="Assets/img/dash_petit.jpg" alt="">
     </div>
 <div class="grid grid-cols-1 m-8">
     <div class="grid grid-cols-2 gap-4 ">

@@ -21,13 +21,19 @@ class ControllerInvoices{
             if (isset($_GET['page']) && $_GET['page'] > 0){
                 $page = $_GET['page'] - 1;
             }
+
+            $sort = null;
+
+            if (isset($_GET['date'])){
+                $sort = 'date'.$_GET['date'];
+            }
             
-            $this->invoices($page);
+            $this->invoices($page, $sort);
         }
         
     }
 
-    private function invoices($page){
+    private function invoices($page, $sort){
 
         $this->_invoicesManager = new InvoicesManager;
 
@@ -36,7 +42,7 @@ class ControllerInvoices{
         //
         //INSTANCE DE INVOICESMANAGER.PHP
         //
-        $invoices = $this->_invoicesManager->getInvoices($page);
+        $invoices = $this->_invoicesManager->getInvoices($page, $sort);
 
         $this->_view = new View('Invoices');
         $this->_view->generate(array('invoices' => $invoices, 'totalInvoices' => $totalinvoices));

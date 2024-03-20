@@ -22,12 +22,20 @@ class ControllerCompanies{
                 $page = $_GET['page'] - 1;
             }
 
-            $this->companies($page);
+            $sort = null;
+
+            if (isset($_GET['name'])){
+                $sort = 'name'.$_GET['name'];
+            } else if (isset($_GET['date'])){
+                $sort = 'date'.$_GET['date'];
+            }
+
+            $this->companies($page, $sort);
         }
         
     }
 
-    private function companies($page){
+    private function companies($page, $sort){
 
         $this->_companiesManager = new CompaniesManager;
 
@@ -36,7 +44,7 @@ class ControllerCompanies{
         //
         //INSTANCE DE CompaniesManager.php
         //
-        $companies = $this->_companiesManager->getCompanies($page);
+        $companies = $this->_companiesManager->getCompanies($page, $sort);
     
         $this->_view = new View('Companies');
         $this->_view->generate(array('companies' => $companies, 'totalCompanies' => $totalcompanies));

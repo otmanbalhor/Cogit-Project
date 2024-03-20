@@ -65,8 +65,10 @@ class Database
             $tab[] = new $obj($data);
         }
 
-        return $tab;
         $req->closeCursor();
+
+        return $tab;
+        
     }
 
     protected function postSignup($table)

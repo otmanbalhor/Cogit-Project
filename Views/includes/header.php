@@ -24,6 +24,7 @@
 </script>
 
 </head>
+<body class="flex flex-col h-screen">
 <header>
     <nav class="bg-gray-700 text-white p-4  flex justify-between items-center 475:bg-red">
         <h1 class="text-2xl font-bold m-6 mr-10">COGIP</h1>
