@@ -40,7 +40,7 @@ Responsable de la gestion du projet, y compris la répartition des tâches et le
 
 * **Authentification:** Les utilisateurs peuvent se connecter pour accéder à des fonctionnalités et des données personnalisées.
 * **Dashboard:** Fournit une vue d'ensemble des dernières factures, entreprises et contacts.
-* **Opérations CRUD:** Les utilisateurs peuvent créer et lire les factures, des entreprises et des contacts.
+* **Opérations CRUD:** Les utilisateurs peuvent lire les factures, des entreprises et des contacts tandis que les admins peuvent les créer et les lire.
 * **Gestion des données:** Gérer efficacement les données liées aux factures, aux entreprises et aux contacts.
 * **Interface d'administration:** Permet aux administrateurs de gérer efficacement les données avec des fonctionnalités CRUD.
 * **Personnalisation:** Messages personnalisés en fonction de l'utilisateur connecté (Jean-Christian ou Muriel).
