@@ -1,8 +1,6 @@
 # Cogip-Project 🚀
 
-Ce projet a été réalisé par une équipe de développement passionnée, avec pour objectif principal de répondre aux besoins d'une équipe comptable de l'entreprise COGIP. Nous sommes fiers de présenter cette application web qui vise à améliorer l'efficacité et la convivialité des outils utilisés au quotidien.
-
-Le but de ce projet visait à répondre aux besoins d'un comptable de chez l'entreprise COGIP. Cette application web rationalise le processus comptable en fournissant des fonctionnalités pour gérer efficacement les factures, les entreprises et les contacts.
+Ce projet a été réalisé par une équipe de développement passionnée, avec pour objectif principal de répondre aux besoins d'une équipe comptable de l'entreprise COGIP. Nous sommes fiers de présenter cette application web qui vise à améliorer l'efficacité et la convivialité des outils utilisés au quotidien. Cette application web rationalise le processus comptable en fournissant des fonctionnalités pour gérer efficacement les factures, les entreprises et les contacts.
 
 ## Informations du Projet 🤝
 
