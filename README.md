@@ -83,7 +83,7 @@ Responsable de la gestion du projet, y compris la répartition des tâches et le
 **Page des factures:**
 ![Sans titre](https://github.com/otmanbalhor/Cogip-Project/assets/151409181/1e817389-45f6-43a5-b14a-b5ebb12ce410)
 
-**Page des entreprise:**
+**Page des entreprises:**
 ![Sans titre-1](https://github.com/otmanbalhor/Cogip-Project/assets/151409181/0e59333f-99ba-4c91-9343-171a9b1e73a4)
 
 **Page des entreprises triées par nom:**
@@ -95,7 +95,7 @@ Responsable de la gestion du projet, y compris la répartition des tâches et le
 **Page des contacts triés par nom:**
 ![Sans titre](https://github.com/otmanbalhor/Cogip-Project/assets/151409181/5cf1c743-29d8-470e-9578-30f264e5844f)
 
-**Formule d'inscription:**
+**Formulaire d'inscription:**
 ![Sans titre-1](https://github.com/otmanbalhor/Cogip-Project/assets/151409181/cd6f0a7e-3bfb-42cb-899d-8d48d274f9a9)
 
 **Formulaire de connexion:**
