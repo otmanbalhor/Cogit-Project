@@ -77,7 +77,7 @@ Responsable de la gestion du projet, y compris la répartition des tâches et le
 
 ## Images du projet 📷
 
-**Page d'acuueil:**
+**Page d'accueil:**
 ![Sans titre](https://github.com/otmanbalhor/Cogip-Project/assets/151409181/04ea7c18-7211-4023-a219-01d269ca7d5e)
 
 **Page des factures:**
@@ -112,19 +112,3 @@ Responsable de la gestion du projet, y compris la répartition des tâches et le
 
 **Formulaire pour ajouter un contact:**
 ![Sans titre](https://github.com/otmanbalhor/Cogip-Project/assets/151409181/1347d38b-bff9-4f10-8242-f4bc895b40d7)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
